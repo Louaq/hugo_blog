@@ -2,23 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>//localhost:1313/post/hello/</loc>
+    <loc>https://louaq.github.io/hugo_blog/post/hello/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/</loc>
+    <loc>https://louaq.github.io/hugo_blog/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/archives/</loc>
+    <loc>https://louaq.github.io/hugo_blog/archives/</loc>
     <lastmod>2022-07-26T21:46:25+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/about/</loc>
+    <loc>https://louaq.github.io/hugo_blog/about/</loc>
     <lastmod>2022-06-09T20:12:52+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/friend/</loc>
+    <loc>https://louaq.github.io/hugo_blog/friend/</loc>
     <lastmod>2022-06-09T20:12:52+08:00</lastmod>
   </url><url>
-    <loc>//localhost:1313/categories/</loc>
+    <loc>https://louaq.github.io/hugo_blog/categories/</loc>
   </url><url>
-    <loc>//localhost:1313/tags/</loc>
+    <loc>https://louaq.github.io/hugo_blog/tags/</loc>
   </url>
 </urlset>
