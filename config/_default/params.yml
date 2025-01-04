@@ -30,7 +30,7 @@ author: Louaq
 description: "少女祈祷中..."
 subtitle: "少女祈祷中..."
 
-banner: "images/banner.webp"
+banner: "images/banner.jpg"
 # You can also write it in the form of the following url
 # banner: "https://example.com"
 
@@ -46,7 +46,6 @@ banner_srcset:
       media: "(min-width: 800px)"
 
 avatar: "b1.png"
-
 # Open Graph
 open_graph:
   enable: true
@@ -76,8 +75,8 @@ footer:
 sidebar: left
 
 social:
-  # email: mailto:xxx@gmail.com
-  # github: https://github.com/yourname
+  email: mailto:beautbawj9@gmail.com
+  github: https://github.com/Louaq
   # google: https://plus.google.com/yourname
   # twitter: https://twitter.com/yourname
   # facebook: https://www.facebook.com/yourname
@@ -326,7 +325,7 @@ animation:
 
 # see https://github.com/D-Sketon/mouse-firework
 firework:
-  enable: true
+  enable: false
   options:
     excludeElements: ["a", "button"]
     particles:
