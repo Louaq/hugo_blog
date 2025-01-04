@@ -4,7 +4,7 @@
   
   {
     "objectID": "1735478641",
-    "permalink": "/hugo_blog/post/visual-studio-code-and-latex/",
+    "permalink": "/post/visual-studio-code-and-latex/",
     "title": "vscode配置latex环境",
     "date": "2024-12-29 13:24:01",
     "updated": "2024-12-29 13:24:01"
@@ -13,7 +13,7 @@
   , 
   {
     "objectID": "1732536000",
-    "permalink": "/hugo_blog/post/article_1/",
+    "permalink": "/post/article_1/",
     "title": "YOLOv8的训练自己的数据集",
     "date": "2024-11-25 12:00:00",
     "updated": "2024-11-25 12:00:00"
@@ -22,7 +22,7 @@
   , 
   {
     "objectID": "1727265600",
-    "permalink": "/hugo_blog/post/article_2/",
+    "permalink": "/post/article_2/",
     "title": "恒源云",
     "date": "2024-09-25 12:00:00",
     "updated": "2024-09-25 12:00:00"
@@ -31,7 +31,7 @@
   , 
   {
     "objectID": "1724068800",
-    "permalink": "/hugo_blog/post/%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/",
+    "permalink": "/post/%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/",
     "title": "说明文档",
     "date": "2024-08-19 12:00:00",
     "updated": "2024-08-19 12:00:00"
@@ -40,7 +40,7 @@
   , 
   {
     "objectID": "1723377600",
-    "permalink": "/hugo_blog/post/article_11/",
+    "permalink": "/post/article_11/",
     "title": "评估",
     "date": "2024-08-11 12:00:00",
     "updated": "2024-08-11 12:00:00"
@@ -49,7 +49,7 @@
   , 
   {
     "objectID": "1722168000",
-    "permalink": "/hugo_blog/post/article_10/",
+    "permalink": "/post/article_10/",
     "title": "可视化热力图",
     "date": "2024-07-28 12:00:00",
     "updated": "2024-07-28 12:00:00"
@@ -58,7 +58,7 @@
   , 
   {
     "objectID": "1713700800",
-    "permalink": "/hugo_blog/post/article_14/",
+    "permalink": "/post/article_14/",
     "title": "报错",
     "date": "2024-04-21 12:00:00",
     "updated": "2024-04-21 12:00:00"
@@ -67,7 +67,7 @@
   , 
   {
     "objectID": "1678903200",
-    "permalink": "/hugo_blog/post/hello/",
+    "permalink": "/post/hello/",
     "title": "Hello World",
     "date": "2023-03-15 11:00:00",
     "updated": "2023-03-15 11:00:00"

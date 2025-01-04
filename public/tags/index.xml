@@ -2,80 +2,80 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Louaq lab</title>
-    <link>http://localhost:1313/hugo_blog/tags/</link>
+    <link>https://louaq.com/tags/</link>
     <description>Recent content in Tags on Louaq lab</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Sun, 29 Dec 2024 13:24:01 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/hugo_blog/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://louaq.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Latex</title>
-      <link>http://localhost:1313/hugo_blog/tags/latex/</link>
+      <link>https://louaq.com/tags/latex/</link>
       <pubDate>Sun, 29 Dec 2024 13:24:01 +0000</pubDate>
-      <guid>http://localhost:1313/hugo_blog/tags/latex/</guid>
+      <guid>https://louaq.com/tags/latex/</guid>
       <description></description>
     </item>
     <item>
       <title>Vscode</title>
-      <link>http://localhost:1313/hugo_blog/tags/vscode/</link>
+      <link>https://louaq.com/tags/vscode/</link>
       <pubDate>Sun, 29 Dec 2024 13:24:01 +0000</pubDate>
-      <guid>http://localhost:1313/hugo_blog/tags/vscode/</guid>
+      <guid>https://louaq.com/tags/vscode/</guid>
       <description></description>
     </item>
     <item>
       <title>Computer Vision</title>
-      <link>http://localhost:1313/hugo_blog/tags/computer-vision/</link>
+      <link>https://louaq.com/tags/computer-vision/</link>
       <pubDate>Mon, 25 Nov 2024 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hugo_blog/tags/computer-vision/</guid>
+      <guid>https://louaq.com/tags/computer-vision/</guid>
       <description></description>
     </item>
     <item>
       <title>Deep Learning</title>
-      <link>http://localhost:1313/hugo_blog/tags/deep-learning/</link>
+      <link>https://louaq.com/tags/deep-learning/</link>
       <pubDate>Mon, 25 Nov 2024 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hugo_blog/tags/deep-learning/</guid>
+      <guid>https://louaq.com/tags/deep-learning/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>http://localhost:1313/hugo_blog/tags/python/</link>
+      <link>https://louaq.com/tags/python/</link>
       <pubDate>Mon, 25 Nov 2024 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hugo_blog/tags/python/</guid>
+      <guid>https://louaq.com/tags/python/</guid>
       <description></description>
     </item>
     <item>
       <title>恒源云</title>
-      <link>http://localhost:1313/hugo_blog/tags/%E6%81%92%E6%BA%90%E4%BA%91/</link>
+      <link>https://louaq.com/tags/%E6%81%92%E6%BA%90%E4%BA%91/</link>
       <pubDate>Wed, 25 Sep 2024 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hugo_blog/tags/%E6%81%92%E6%BA%90%E4%BA%91/</guid>
+      <guid>https://louaq.com/tags/%E6%81%92%E6%BA%90%E4%BA%91/</guid>
       <description></description>
     </item>
     <item>
       <title>论文</title>
-      <link>http://localhost:1313/hugo_blog/tags/%E8%AE%BA%E6%96%87/</link>
+      <link>https://louaq.com/tags/%E8%AE%BA%E6%96%87/</link>
       <pubDate>Mon, 19 Aug 2024 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hugo_blog/tags/%E8%AE%BA%E6%96%87/</guid>
+      <guid>https://louaq.com/tags/%E8%AE%BA%E6%96%87/</guid>
       <description></description>
     </item>
     <item>
       <title>人工智能</title>
-      <link>http://localhost:1313/hugo_blog/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</link>
+      <link>https://louaq.com/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</link>
       <pubDate>Mon, 19 Aug 2024 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hugo_blog/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</guid>
+      <guid>https://louaq.com/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</guid>
       <description></description>
     </item>
     <item>
       <title>热力图</title>
-      <link>http://localhost:1313/hugo_blog/tags/%E7%83%AD%E5%8A%9B%E5%9B%BE/</link>
+      <link>https://louaq.com/tags/%E7%83%AD%E5%8A%9B%E5%9B%BE/</link>
       <pubDate>Sun, 28 Jul 2024 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hugo_blog/tags/%E7%83%AD%E5%8A%9B%E5%9B%BE/</guid>
+      <guid>https://louaq.com/tags/%E7%83%AD%E5%8A%9B%E5%9B%BE/</guid>
       <description></description>
     </item>
     <item>
       <title>Ultralytics</title>
-      <link>http://localhost:1313/hugo_blog/tags/ultralytics/</link>
+      <link>https://louaq.com/tags/ultralytics/</link>
       <pubDate>Sun, 21 Apr 2024 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/hugo_blog/tags/ultralytics/</guid>
+      <guid>https://louaq.com/tags/ultralytics/</guid>
       <description></description>
     </item>
   </channel>
