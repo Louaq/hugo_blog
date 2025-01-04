@@ -2,82 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://louaq.github.io/hugo_blog/categories/</loc>
+    <loc>http://localhost:1313/hugo_blog/categories/</loc>
     <lastmod>2024-12-29T13:24:01+00:00</lastmod>
   </url><url>
-    <loc>https://louaq.github.io/hugo_blog/tags/latex/</loc>
+    <loc>http://localhost:1313/hugo_blog/tags/latex/</loc>
     <lastmod>2024-12-29T13:24:01+00:00</lastmod>
   </url><url>
-    <loc>https://louaq.github.io/hugo_blog/</loc>
+    <loc>http://localhost:1313/hugo_blog/</loc>
     <lastmod>2024-12-29T13:24:01+00:00</lastmod>
   </url><url>
-    <loc>https://louaq.github.io/hugo_blog/tags/</loc>
+    <loc>http://localhost:1313/hugo_blog/tags/</loc>
     <lastmod>2024-12-29T13:24:01+00:00</lastmod>
   </url><url>
-    <loc>https://louaq.github.io/hugo_blog/tags/vscode/</loc>
+    <loc>http://localhost:1313/hugo_blog/tags/vscode/</loc>
     <lastmod>2024-12-29T13:24:01+00:00</lastmod>
   </url><url>
-    <loc>https://louaq.github.io/hugo_blog/post/visual-studio-code-and-latex/</loc>
+    <loc>http://localhost:1313/hugo_blog/post/visual-studio-code-and-latex/</loc>
     <lastmod>2024-12-29T13:24:01+00:00</lastmod>
   </url><url>
-    <loc>https://louaq.github.io/hugo_blog/categories/yolo/</loc>
+    <loc>http://localhost:1313/hugo_blog/categories/yolo/</loc>
     <lastmod>2024-12-29T13:24:01+00:00</lastmod>
   </url><url>
-    <loc>https://louaq.github.io/hugo_blog/tags/computer-vision/</loc>
+    <loc>http://localhost:1313/hugo_blog/tags/computer-vision/</loc>
     <lastmod>2024-11-25T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://louaq.github.io/hugo_blog/tags/deep-learning/</loc>
+    <loc>http://localhost:1313/hugo_blog/tags/deep-learning/</loc>
     <lastmod>2024-11-25T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://louaq.github.io/hugo_blog/tags/python/</loc>
+    <loc>http://localhost:1313/hugo_blog/tags/python/</loc>
     <lastmod>2024-11-25T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://louaq.github.io/hugo_blog/post/article_1/</loc>
+    <loc>http://localhost:1313/hugo_blog/post/article_1/</loc>
     <lastmod>2024-11-25T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://louaq.github.io/hugo_blog/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://localhost:1313/hugo_blog/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2024-11-25T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://louaq.github.io/hugo_blog/tags/%E6%81%92%E6%BA%90%E4%BA%91/</loc>
+    <loc>http://localhost:1313/hugo_blog/tags/%E6%81%92%E6%BA%90%E4%BA%91/</loc>
     <lastmod>2024-09-25T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://louaq.github.io/hugo_blog/post/article_2/</loc>
+    <loc>http://localhost:1313/hugo_blog/post/article_2/</loc>
     <lastmod>2024-09-25T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://louaq.github.io/hugo_blog/tags/%E8%AE%BA%E6%96%87/</loc>
+    <loc>http://localhost:1313/hugo_blog/tags/%E8%AE%BA%E6%96%87/</loc>
     <lastmod>2024-08-19T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://louaq.github.io/hugo_blog/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</loc>
+    <loc>http://localhost:1313/hugo_blog/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/</loc>
     <lastmod>2024-08-19T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://louaq.github.io/hugo_blog/post/%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/</loc>
+    <loc>http://localhost:1313/hugo_blog/post/%E8%AF%B4%E6%98%8E%E6%96%87%E6%A1%A3/</loc>
     <lastmod>2024-08-19T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://louaq.github.io/hugo_blog/post/article_11/</loc>
+    <loc>http://localhost:1313/hugo_blog/post/article_11/</loc>
     <lastmod>2024-08-11T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://louaq.github.io/hugo_blog/post/article_10/</loc>
+    <loc>http://localhost:1313/hugo_blog/post/article_10/</loc>
     <lastmod>2024-07-28T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://louaq.github.io/hugo_blog/tags/%E7%83%AD%E5%8A%9B%E5%9B%BE/</loc>
+    <loc>http://localhost:1313/hugo_blog/tags/%E7%83%AD%E5%8A%9B%E5%9B%BE/</loc>
     <lastmod>2024-07-28T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://louaq.github.io/hugo_blog/tags/ultralytics/</loc>
+    <loc>http://localhost:1313/hugo_blog/tags/ultralytics/</loc>
     <lastmod>2024-04-21T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://louaq.github.io/hugo_blog/post/article_14/</loc>
+    <loc>http://localhost:1313/hugo_blog/post/article_14/</loc>
     <lastmod>2024-04-21T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://louaq.github.io/hugo_blog/post/hello/</loc>
+    <loc>http://localhost:1313/hugo_blog/post/hello/</loc>
     <lastmod>2023-03-15T11:00:00-07:00</lastmod>
   </url><url>
-    <loc>https://louaq.github.io/hugo_blog/archives/</loc>
+    <loc>http://localhost:1313/hugo_blog/archives/</loc>
     <lastmod>2022-07-26T21:46:25+08:00</lastmod>
   </url><url>
-    <loc>https://louaq.github.io/hugo_blog/about/</loc>
+    <loc>http://localhost:1313/hugo_blog/about/</loc>
     <lastmod>2022-06-09T20:12:52+08:00</lastmod>
   </url><url>
-    <loc>https://louaq.github.io/hugo_blog/friend/</loc>
+    <loc>http://localhost:1313/hugo_blog/friend/</loc>
     <lastmod>2022-06-09T20:12:52+08:00</lastmod>
   </url>
 </urlset>

@@ -207,7 +207,7 @@ math:
 valine:
   enable: true # if you want to use valine,please set this value is true
   appId: 0Mjc3mdBrN8OYovk9yaFnaWO-gzGzoHsz # leancloud application app id
-  appKey: VNEmZEAvagCiszqPZ3JFfVI4VNEmZEAvagCiszqPZ3JFfVI4 # leancloud application app key
+  appKey: VNEmZEAvagCiszqPZ3JFfVI4 # leancloud application app key
   pageSize: 10 # comment list page size
   avatar: mp # gravatar style https://valine.js.org/#/avatar
   lang: zh-cn # i18n: zh-cn/en
