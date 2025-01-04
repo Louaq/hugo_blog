@@ -1,4 +1,4 @@
-baseURL = 'https://louaq.github.io/hugo_blog/'
+baseURL = 'https://louaq.com/'
 title = 'Louaq lab'
 theme = 'hugo-theme-reimu'
 languageCode = 'zh-CN'

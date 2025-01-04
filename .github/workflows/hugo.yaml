@@ -64,6 +64,16 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+      - name: Deploy To VPS # 部署到个人服务器
+        uses: cross-the-world/scp-pipeline@master
+        with:
+          host: ${{ secrets.DC_HOST }} # Actions Secrets Token
+          user: ${{ secrets.DC_USER }} # Actions Secrets Token
+          pass: ${{ secrets.DC_PASS }} # Actions Secrets Token
+          port: ${{ secrets.DC_PORT }} # Actions Secrets Token
+          connect_timeout: 10s
+          local: './public/*'
+          remote: /www/wwwroot/louaq.com/ # 网站根目录
 
   # Deployment job
   deploy:
