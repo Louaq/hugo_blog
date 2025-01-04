@@ -281,6 +281,10 @@ algolia_search:
   appID: NDK8J4UYWP
   apiKey: 3391326455879dbb1169634857165c34
   indexName: reimu
+  fields:
+    - path #必须配置
+    - title #必须配置
+    - categories #推荐配置
   hits:
     per_page: 10
   labels:
