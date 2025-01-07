@@ -27,8 +27,8 @@ dateFormat: "2006-01-02"
 timeFormat: "2006-01-02 15:04:05"
 
 author: Louaq
-description: "少女祈祷中..."
-subtitle: "少女祈祷中..."
+description: "waiting..."
+subtitle: "waiting..."
 
 banner: "images/banner.jpg"
 # You can also write it in the form of the following url
@@ -88,9 +88,9 @@ social:
   # flickr: https://www.flickr.com/photos/yourname
   # dribbble: https://dribbble.com/yourname
   # behance: https://www.behance.net/yourname
-  # bilibili: https://space.bilibili.com/yourname
-  # weibo: https://weibo.com/yourname
-  # zhihu: https://www.zhihu.com/people/yourname
+  bilibili: https://space.bilibili.com/397523112
+  weibo: https://www.weibo.com/u/5769723850
+  zhihu: https://www.zhihu.com/people/an-ye-jing-ling-64-3
   # reddit: https://www.reddit.com/user/yourname
   # tumblr: https://yourname.tumblr.com
   # medium: https://medium.com/@yourname
