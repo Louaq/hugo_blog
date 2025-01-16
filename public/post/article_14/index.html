@@ -3,7 +3,7 @@
   lang="zh-cn"
   
 >
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8" />
 <meta
   name="viewport"
@@ -36,7 +36,7 @@
 
 
 <script>
-  window.siteConfig = JSON.parse("{\"anchor_icon\":null,\"clipboard\":{\"copyright\":{\"content\":\"本文版权：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！\",\"count\":50,\"enable\":true},\"fail\":\"复制失败 (ﾟ⊿ﾟ)ﾂ\",\"success\":\"复制成功(*^▽^*)\"},\"code_block\":{\"expand\":10},\"icon_font\":\"4552607_tq6stt6tcg\",\"outdate\":{\"daysago\":20,\"enable\":true,\"message\":\"本文最后更新于 {time}，请注意文中内容可能已经发生变化。\"}}");
+  window.siteConfig = JSON.parse("{\"anchor_icon\":null,\"clipboard\":{\"copyright\":{\"content\":\"本文版权：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！\",\"count\":50,\"enable\":true},\"fail\":\"复制失败 (ﾟ⊿ﾟ)ﾂ\",\"success\":\"复制成功(*^▽^*)\"},\"code_block\":{\"expand\":10},\"icon_font\":\"4552607_bq08450reo\",\"outdate\":{\"daysago\":20,\"enable\":true,\"message\":\"本文最后更新于 {time}，请注意文中内容可能已经发生变化。\"}}");
 </script>
 
 
@@ -84,7 +84,7 @@
 
   <link
     rel="preload"
-    href="//at.alicdn.com/t/c/font_4552607_tq6stt6tcg.woff2"
+    href="//at.alicdn.com/t/c/font_4552607_bq08450reo.woff2"
     as="font"
     type="font/woff2"
     crossorigin="anonymous"
@@ -99,9 +99,7 @@
 
 
 
-
-  
- <link rel="stylesheet" href="/css/loader.min.2ad0e9bbffb534e893c0ecefc44787a277cf851387e8ad9dccfbc3a5f0886dbe.css" />
+ <link rel="stylesheet" href="/css/loader.css" />
 
 
 
@@ -112,7 +110,7 @@
     property="og:description"
     content="waiting..."
   />
-  <meta property="og:url" content="https://louaq.com/post/article_14/" />
+  <meta property="og:url" content="http://localhost:1313/post/article_14/" />
   <meta
     property="og:site_name"
     content="Louaq lab"
@@ -147,9 +145,7 @@
 
 
 
-
-  
- <link rel="stylesheet" href="/css/main.min.0550ef435d094cd652ef88ba44a25939b3a724128f24d59e1f9c26fc6b0a770a.css" />
+ <link rel="stylesheet" href="/css/main.css" />
 
 
 
@@ -323,6 +319,7 @@
 <header id="header">
   
     
+    <picture></picture>
       <img fetchpriority="high" src="https://yangyang666.oss-cn-chengdu.aliyuncs.com/images/30_Abyss_4k_e2e25.jpg" alt="报错">
     
   
@@ -352,315 +349,10 @@
     </div>
   </div>
 </header>
-        <main id="content">
+        <div id="content"
           
-          <section id="main">
-  <article
-  class="h-entry article"
-  itemprop="blogPost"
-  itemscope
-  itemtype="https://schema.org/BlogPosting"
->
-  <div
-    class="article-inner"
-    data-aos="fade-up"
-  >
-    <div class="article-meta">
-      <div class="article-date">
-  <a
-    href="https://louaq.com/post/article_14/"
-    class="article-date-link"
-    data-aos="zoom-in"
-  >
-    <time datetime="2024-04-21 12:00:00 &#43;0000 UTC" itemprop="datePublished"
-      >2024-04-21</time
-    >
-    <time style="display: none;" id="post-update-time"
-      >2024-04-21</time
-    >
-  </a>
-</div>
-
-      <div class="article-category">
-  
-    <a
-      class="article-category-link"
-      href="/categories/yolo"
-      data-aos="zoom-in"
-      >YOLO</a
-    >
-  
-</div>
-
-    </div>
-    <div class="hr-line"></div>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <blockquote id="outdate-blockquote" style="display: none;">
-          <p></p>
-        </blockquote>
-      
-      
-        <h2 id="一本文介绍">
-<a class="header-anchor" href="#%e4%b8%80%e6%9c%ac%e6%96%87%e4%bb%8b%e7%bb%8d"></a>
-一、本文介绍
-</h2><p>本文为专栏内读者和我个人在训练<strong>YOLOv8时遇到的各种错误解决方案</strong>，你遇到的问题本文基本上都能够解决。</p>
-<h2 id="二-报错问题">
-<a class="header-anchor" href="#%e4%ba%8c-%e6%8a%a5%e9%94%99%e9%97%ae%e9%a2%98"></a>
-二、 报错问题 
-</h2><p># 以下为两个重要库的版本，大家可以对应下载，使用教程我会更新，时间还没来得及大家可以先看视频使用。</p>
-<blockquote>
-<p><strong>项目环境：</strong></p>
-<p>python == 3.9.7</p>
-<p>pytorch == 1.12.1</p>
-<p>timm == 0.9.12</p>
-<p>mmcv-full == 1.6.2</p>
-</blockquote>
-<hr>
-<h3 id="1训练过程中loss出现nan值">
-<a class="header-anchor" href="#1%e8%ae%ad%e7%bb%83%e8%bf%87%e7%a8%8b%e4%b8%adloss%e5%87%ba%e7%8e%b0nan%e5%80%bc"></a>
-(1)训练过程中loss出现Nan值.
-</h3><p>可以尝试关闭AMP混合精度训练，如何关闭amp呢找到如下文件&rsquo;ultralytics/cfg/default.yaml&rsquo;，其中有一个参数是</p>
-\[True, False\]<p>, True runs AMP check</p>
-<p>我们将其设置为False即可，默认时为True。</p>
-<p>.</p>
-<h3 id="2多卡训练问题修改模型以后不能支持多卡训练可以尝试下面的两行命令行操作两个是不同的操作是代表不同的版本现尝试第一个不行用第二个">
-<a class="header-anchor" href="#2%e5%a4%9a%e5%8d%a1%e8%ae%ad%e7%bb%83%e9%97%ae%e9%a2%98%e4%bf%ae%e6%94%b9%e6%a8%a1%e5%9e%8b%e4%bb%a5%e5%90%8e%e4%b8%8d%e8%83%bd%e6%94%af%e6%8c%81%e5%a4%9a%e5%8d%a1%e8%ae%ad%e7%bb%83%e5%8f%af%e4%bb%a5%e5%b0%9d%e8%af%95%e4%b8%8b%e9%9d%a2%e7%9a%84%e4%b8%a4%e8%a1%8c%e5%91%bd%e4%bb%a4%e8%a1%8c%e6%93%8d%e4%bd%9c%e4%b8%a4%e4%b8%aa%e6%98%af%e4%b8%8d%e5%90%8c%e7%9a%84%e6%93%8d%e4%bd%9c%e6%98%af%e4%bb%a3%e8%a1%a8%e4%b8%8d%e5%90%8c%e7%9a%84%e7%89%88%e6%9c%ac%e7%8e%b0%e5%b0%9d%e8%af%95%e7%ac%ac%e4%b8%80%e4%b8%aa%e4%b8%8d%e8%a1%8c%e7%94%a8%e7%ac%ac%e4%ba%8c%e4%b8%aa"></a>
-(2)多卡训练问题,修改模型以后不能支持多卡训练可以尝试下面的两行命令行操作，两个是不同的操作，是代表不同的版本现尝试第一个不行用第二个
-</h3><p>    python -m torch.distributed.run &ndash;nproc_per_node 2 train.py</p>
-<p>    python -m torch.distributed.launch &ndash;nproc_per_node 2 train.py</p>
-<hr>
-<h3 id="3-针对运行过程中的一些报错解决">
-<a class="header-anchor" href="#3-%e9%92%88%e5%af%b9%e8%bf%90%e8%a1%8c%e8%bf%87%e7%a8%8b%e4%b8%ad%e7%9a%84%e4%b8%80%e4%ba%9b%e6%8a%a5%e9%94%99%e8%a7%a3%e5%86%b3"></a>
-(3) 针对运行过程中的一些报错解决
-</h3><p>    <strong>1.如果训练的过程中验证报错了(主要是一些形状不匹配的错误这是因为验证集的一些特殊图片导致)</strong></p>
-<p>就是有这种训练第一个epochs完成后开始验证的时候报错，下面的方法基本百分之九十都能够解决。</p>
-<p><img src="https://yangyang666.oss-cn-chengdu.aliyuncs.com/typoraImages/e61c95278a244aebbe4ac67f07f90466.png" alt=""></p>
-<p>    找到ultralytics/models/yolo/detect/train.py的DetectionTrainer class中的build_dataset函数中的rect=mode == &lsquo;val&rsquo;改为rect=False</p>
-<p>    <strong>2.推理的时候运行detect.py文件报了形状不匹配的错误</strong></p>
-<p>    找到ultralytics/engine/predictor.py找到函数def pre_transform(self, im),在LetterBox中的auto改为False</p>
-<p>    <strong>3.训练的过程中报错类型不匹配的问题</strong></p>
-<p>    找到&rsquo;ultralytics/engine/validator.py&rsquo;文件找到 &lsquo;class BaseValidator:&rsquo; 然后在其&rsquo;__call__&lsquo;中</p>
-<p>    self.args.half = self.device.type != &lsquo;cpu&rsquo;  # force FP16 val during training的一行代码下面加上self.args.half = False</p>
-<hr>
-<h3 id="4-针对yaml文件中的nc修改">
-<a class="header-anchor" href="#4-%e9%92%88%e5%af%b9yaml%e6%96%87%e4%bb%b6%e4%b8%ad%e7%9a%84nc%e4%bf%ae%e6%94%b9"></a>
-(4) 针对yaml文件中的nc修改
-</h3><p>    不用修改，模型会自动根据你数据集的配置文件获取。</p>
-<p>    这也是模型打印两次的区别，第一次打印出来的就是你选择模型的yaml文件结构，第二次打印的就是替换了你数据集的yaml文件，模型使用的是第二种。</p>
-<hr>
-<h3 id="5-针对环境的问题">
-<a class="header-anchor" href="#5-%e9%92%88%e5%af%b9%e7%8e%af%e5%a2%83%e7%9a%84%e9%97%ae%e9%a2%98"></a>
-(5) 针对环境的问题
-</h3><p>    环境的问题我实在解决不过来，所以大家可以自行在网上搜索解决方案。</p>
-<hr>
-<h3 id="6-训练过程中不打印gflops">
-<a class="header-anchor" href="#6-%e8%ae%ad%e7%bb%83%e8%bf%87%e7%a8%8b%e4%b8%ad%e4%b8%8d%e6%89%93%e5%8d%b0gflops"></a>
-(6) 训练过程中不打印GFLOpS
-</h3><p>计算的GFLOPs计算异常不打印，所以需要额外修改一处， 我们找到如下文件&rsquo;ultralytics/utils/torch_utils.py&rsquo;文件内有如下的代码按照如下的图片进行修改，大家看好函数就行，其中红框的640可能和你的不一样， 然后用我给的代码替换掉整个代码即可。</p>
-<p><img src="https://yangyang666.oss-cn-chengdu.aliyuncs.com/typoraImages/24068f6039b94ceeb91e98642c00e594.png" alt=""></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">get_flops</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">imgsz</span><span class="o">=</span><span class="mi">640</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Return a YOLO model&#39;s FLOPs.&#34;&#34;&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">try</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">model</span> <span class="o">=</span> <span class="n">de_parallel</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="n">p</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">())</span>
-</span></span><span class="line"><span class="cl">        <span class="c1"># stride = max(int(model.stride.max()), 32) if hasattr(model, &#39;stride&#39;) else 32  # max stride</span>
-</span></span><span class="line"><span class="cl">        <span class="n">stride</span> <span class="o">=</span> <span class="mi">640</span>
-</span></span><span class="line"><span class="cl">        <span class="n">im</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span> <span class="n">stride</span><span class="p">),</span> <span class="n">device</span><span class="o">=</span><span class="n">p</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>  <span class="c1"># input image in BCHW format</span>
-</span></span><span class="line"><span class="cl">        <span class="n">flops</span> <span class="o">=</span> <span class="n">thop</span><span class="o">.</span><span class="n">profile</span><span class="p">(</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">model</span><span class="p">),</span> <span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="n">im</span><span class="p">],</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="mf">1E9</span> <span class="o">*</span> <span class="mi">2</span> <span class="k">if</span> <span class="n">thop</span> <span class="k">else</span> <span class="mi">0</span>  <span class="c1"># stride GFLOPs</span>
-</span></span><span class="line"><span class="cl">        <span class="n">imgsz</span> <span class="o">=</span> <span class="n">imgsz</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">imgsz</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="k">else</span> <span class="p">[</span><span class="n">imgsz</span><span class="p">,</span> <span class="n">imgsz</span><span class="p">]</span>  <span class="c1"># expand if int/float</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">flops</span> <span class="o">*</span> <span class="n">imgsz</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">stride</span> <span class="o">*</span> <span class="n">imgsz</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">stride</span>  <span class="c1"># 640x640 GFLOPs</span>
-</span></span><span class="line"><span class="cl">    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">0</span>
-</span></span></code></pre></div><hr>
-<h3 id="7-mmcv安装的解决方法">
-<a class="header-anchor" href="#7-mmcv%e5%ae%89%e8%a3%85%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%b3%95"></a>
-(7) mmcv安装的解决方法
-</h3><p>有的读者mmcv-full会安装失败是因为自身系统的编译工具有问题，也有可能是环境之间安装的有冲突 推荐大家离线安装的形式,下面的地址中大家可以找找自己的版本,下载到本地进行安装。 <a href="https://download.openmmlab.com/mmcv/dist/cu111/torch1.8.0/index.html">https://download.openmmlab.com/mmcv/dist/cu111/torch1.8.0/index.html</a> <a href="https://download.openmmlab.com/mmcv/dist/index.html">https://download.openmmlab.com/mmcv/dist/index.html</a> </p>
-
-      
-    </div>
-    <footer class="article-footer">
-      
-        
-
-
-
-
-
-
-<blockquote class="article-copyright">
-  
-    <p><strong>本文作者：</strong>Louaq @ Louaq lab</p>
-  
-  
-    <p>
-      <strong>本文链接：</strong><a href="https://louaq.com/post/article_14/">https://louaq.com/post/article_14/</a>
-    </p>
-  
-  
-    <p><strong>本文标题：</strong>报错</p>
-  
-  
-    <p><strong>本文发布时间：</strong>2024-04-21 12:00:00</p>
-  
-  
-    <p><strong>本文修改时间：</strong>2024-04-21 12:00:00</p>
-  
-  
-    <p>
-      <strong>本文版权：</strong>本博客所有文章除特别声明外，均采用
-      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener external nofollow noreferrer" target="_blank"
-        ><span class="icon-creative-commons"></span>BY-NC-SA</a
-      >
-      许可协议。转载请注明出处！
-    </p>
-    <span class="icon-creative-commons article-copyright-bg"></span>
-  
-</blockquote>
-
-      
-
-      
-
-      
-        <a
-          data-aos="zoom-in"
-          href="https://louaq.com/post/article_14/#comments"
-          class="article-comment-link"
-        >
-          <span
-            class="post-comments-count valine-comment-count"
-            data-xid="https//louaq.com/post/article_14/"
-            itemprop="commentCount"
-          ></span>
-          留言
-        </a>
-      
-
-      
-
-      
-
-      
-        <span
-          data-aos="zoom-in"
-          id="/post/article_14/"
-          class="leancloud_visitors article-visitor-link"
-          data-flag-title="报错"
-        >
-          <span class="leancloud-visitors-count">0</span>
-          <em class="post-meta-item-text">阅读量</em>
-        </span>
-      
-
-      
-      <ul class="article-tag-list" itemprop="keywords">
-  
-    <li class="article-tag-list-item" data-aos="zoom-in">
-      <a
-        class="article-tag-list-link"
-        href="/tags/%e8%ae%ba%e6%96%87"
-        rel="tag"
-        >论文</a
-      >
-    </li>
-  
-    <li class="article-tag-list-item" data-aos="zoom-in">
-      <a
-        class="article-tag-list-link"
-        href="/tags/python"
-        rel="tag"
-        >PYTHON</a
-      >
-    </li>
-  
-    <li class="article-tag-list-item" data-aos="zoom-in">
-      <a
-        class="article-tag-list-link"
-        href="/tags/ultralytics"
-        rel="tag"
-        >ULTRALYTICS</a
-      >
-    </li>
-  
-</ul>
-
-    </footer>
-  </div>
-  
-    
-  <nav
-    id="article-nav"
-    data-aos="fade-up"
-  >
-    
-      <div class="article-nav-link-wrap article-nav-link-left">
-        
-          
-          
-            <img
-              data-src="https://yangyang666.oss-cn-chengdu.aliyuncs.com/wordpress/%E4%BA%8C%E6%AC%A1%E5%85%83%E7%BB%9D%E7%BE%8E%E5%A3%81%E7%BA%B8%EF%BC%88847%EF%BC%89/079cf572a10db65f8a1bb9875e0b377a.jpg"
-              data-sizes="auto"
-              alt="Hello World"
-              class="lazyload"
-            />
-          
-        
-        <a href="https://louaq.com/post/hello/"></a>
-        <div class="article-nav-caption">前一篇</div>
-        <h3 class="article-nav-title">
-          
-            Hello World
-          
-        </h3>
-      </div>
-    
-
-    
-      <div class="article-nav-link-wrap article-nav-link-right">
-        
-          <img
-            data-src="https://yangyang666.oss-cn-chengdu.aliyuncs.com/images/24Burst1_4k_1b397.jpg"
-            data-sizes="auto"
-            alt="可视化热力图"
-            class="lazyload"
-          />
-        
-        <a href="https://louaq.com/post/article_10/"></a>
-        <div class="article-nav-caption">后一篇</div>
-        <h3 class="article-nav-title">
-          
-            可视化热力图
-          
-        </h3>
-      </div>
-    
-  </nav>
-
-
-  
-</article>
-
-  <section
-    id="comments"
-    class="vcomment"
-    data-aos="fade-up"
-  ></section>
-
-
-
-
-
-
-
-
-
-
-</section>
-          
-            <aside id="sidebar">
+          class="sidebar-right"  >
+          <aside id="sidebar">
   
   
   <div class="sidebar-wrapper wrap-sticky">
@@ -869,8 +561,358 @@
   </div>
 </aside>
 
+          <section id="main">
+  <article
+  class="h-entry article"
+  itemprop="blogPost"
+  itemscope
+  itemtype="https://schema.org/BlogPosting"
+>
+  <div
+    class="article-inner"
+    data-aos="fade-up"
+  >
+    <div class="article-meta">
+      <div class="article-date">
+  <a
+    href="http://localhost:1313/post/article_14/"
+    class="article-date-link"
+    data-aos="zoom-in"
+  >
+    <time datetime="2024-04-21 12:00:00 &#43;0000 UTC" itemprop="datePublished"
+      >2024-04-21</time
+    >
+    <time style="display: none;" id="post-update-time"
+      >2024-04-21</time
+    >
+  </a>
+</div>
+
+      <div class="article-category">
+  
+    <a
+      class="article-category-link"
+      href="/categories/yolo"
+      data-aos="zoom-in"
+      >YOLO</a
+    >
+  
+</div>
+
+    </div>
+    <div class="hr-line"></div>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <blockquote id="outdate-blockquote" style="display: none;">
+          <p></p>
+        </blockquote>
+      
+      
+        <h2 id="一本文介绍">
+<a class="header-anchor" href="#%e4%b8%80%e6%9c%ac%e6%96%87%e4%bb%8b%e7%bb%8d"></a>
+一、本文介绍
+</h2><p>本文为专栏内读者和我个人在训练<strong>YOLOv8时遇到的各种错误解决方案</strong>，你遇到的问题本文基本上都能够解决。</p>
+<h2 id="二-报错问题">
+<a class="header-anchor" href="#%e4%ba%8c-%e6%8a%a5%e9%94%99%e9%97%ae%e9%a2%98"></a>
+二、 报错问题 
+</h2><p># 以下为两个重要库的版本，大家可以对应下载，使用教程我会更新，时间还没来得及大家可以先看视频使用。</p>
+<blockquote>
+<p><strong>项目环境：</strong></p>
+<p>python == 3.9.7</p>
+<p>pytorch == 1.12.1</p>
+<p>timm == 0.9.12</p>
+<p>mmcv-full == 1.6.2</p>
+</blockquote>
+<hr>
+<h3 id="1训练过程中loss出现nan值">
+<a class="header-anchor" href="#1%e8%ae%ad%e7%bb%83%e8%bf%87%e7%a8%8b%e4%b8%adloss%e5%87%ba%e7%8e%b0nan%e5%80%bc"></a>
+(1)训练过程中loss出现Nan值.
+</h3><p>可以尝试关闭AMP混合精度训练，如何关闭amp呢找到如下文件&rsquo;ultralytics/cfg/default.yaml&rsquo;，其中有一个参数是</p>
+\[True, False\]<p>, True runs AMP check</p>
+<p>我们将其设置为False即可，默认时为True。</p>
+<p>.</p>
+<h3 id="2多卡训练问题修改模型以后不能支持多卡训练可以尝试下面的两行命令行操作两个是不同的操作是代表不同的版本现尝试第一个不行用第二个">
+<a class="header-anchor" href="#2%e5%a4%9a%e5%8d%a1%e8%ae%ad%e7%bb%83%e9%97%ae%e9%a2%98%e4%bf%ae%e6%94%b9%e6%a8%a1%e5%9e%8b%e4%bb%a5%e5%90%8e%e4%b8%8d%e8%83%bd%e6%94%af%e6%8c%81%e5%a4%9a%e5%8d%a1%e8%ae%ad%e7%bb%83%e5%8f%af%e4%bb%a5%e5%b0%9d%e8%af%95%e4%b8%8b%e9%9d%a2%e7%9a%84%e4%b8%a4%e8%a1%8c%e5%91%bd%e4%bb%a4%e8%a1%8c%e6%93%8d%e4%bd%9c%e4%b8%a4%e4%b8%aa%e6%98%af%e4%b8%8d%e5%90%8c%e7%9a%84%e6%93%8d%e4%bd%9c%e6%98%af%e4%bb%a3%e8%a1%a8%e4%b8%8d%e5%90%8c%e7%9a%84%e7%89%88%e6%9c%ac%e7%8e%b0%e5%b0%9d%e8%af%95%e7%ac%ac%e4%b8%80%e4%b8%aa%e4%b8%8d%e8%a1%8c%e7%94%a8%e7%ac%ac%e4%ba%8c%e4%b8%aa"></a>
+(2)多卡训练问题,修改模型以后不能支持多卡训练可以尝试下面的两行命令行操作，两个是不同的操作，是代表不同的版本现尝试第一个不行用第二个
+</h3><p>    python -m torch.distributed.run &ndash;nproc_per_node 2 train.py</p>
+<p>    python -m torch.distributed.launch &ndash;nproc_per_node 2 train.py</p>
+<hr>
+<h3 id="3-针对运行过程中的一些报错解决">
+<a class="header-anchor" href="#3-%e9%92%88%e5%af%b9%e8%bf%90%e8%a1%8c%e8%bf%87%e7%a8%8b%e4%b8%ad%e7%9a%84%e4%b8%80%e4%ba%9b%e6%8a%a5%e9%94%99%e8%a7%a3%e5%86%b3"></a>
+(3) 针对运行过程中的一些报错解决
+</h3><p>    <strong>1.如果训练的过程中验证报错了(主要是一些形状不匹配的错误这是因为验证集的一些特殊图片导致)</strong></p>
+<p>就是有这种训练第一个epochs完成后开始验证的时候报错，下面的方法基本百分之九十都能够解决。</p>
+<p><img src="https://yangyang666.oss-cn-chengdu.aliyuncs.com/typoraImages/e61c95278a244aebbe4ac67f07f90466.png" alt=""></p>
+<p>    找到ultralytics/models/yolo/detect/train.py的DetectionTrainer class中的build_dataset函数中的rect=mode == &lsquo;val&rsquo;改为rect=False</p>
+<p>    <strong>2.推理的时候运行detect.py文件报了形状不匹配的错误</strong></p>
+<p>    找到ultralytics/engine/predictor.py找到函数def pre_transform(self, im),在LetterBox中的auto改为False</p>
+<p>    <strong>3.训练的过程中报错类型不匹配的问题</strong></p>
+<p>    找到&rsquo;ultralytics/engine/validator.py&rsquo;文件找到 &lsquo;class BaseValidator:&rsquo; 然后在其&rsquo;__call__&lsquo;中</p>
+<p>    self.args.half = self.device.type != &lsquo;cpu&rsquo;  # force FP16 val during training的一行代码下面加上self.args.half = False</p>
+<hr>
+<h3 id="4-针对yaml文件中的nc修改">
+<a class="header-anchor" href="#4-%e9%92%88%e5%af%b9yaml%e6%96%87%e4%bb%b6%e4%b8%ad%e7%9a%84nc%e4%bf%ae%e6%94%b9"></a>
+(4) 针对yaml文件中的nc修改
+</h3><p>    不用修改，模型会自动根据你数据集的配置文件获取。</p>
+<p>    这也是模型打印两次的区别，第一次打印出来的就是你选择模型的yaml文件结构，第二次打印的就是替换了你数据集的yaml文件，模型使用的是第二种。</p>
+<hr>
+<h3 id="5-针对环境的问题">
+<a class="header-anchor" href="#5-%e9%92%88%e5%af%b9%e7%8e%af%e5%a2%83%e7%9a%84%e9%97%ae%e9%a2%98"></a>
+(5) 针对环境的问题
+</h3><p>    环境的问题我实在解决不过来，所以大家可以自行在网上搜索解决方案。</p>
+<hr>
+<h3 id="6-训练过程中不打印gflops">
+<a class="header-anchor" href="#6-%e8%ae%ad%e7%bb%83%e8%bf%87%e7%a8%8b%e4%b8%ad%e4%b8%8d%e6%89%93%e5%8d%b0gflops"></a>
+(6) 训练过程中不打印GFLOpS
+</h3><p>计算的GFLOPs计算异常不打印，所以需要额外修改一处， 我们找到如下文件&rsquo;ultralytics/utils/torch_utils.py&rsquo;文件内有如下的代码按照如下的图片进行修改，大家看好函数就行，其中红框的640可能和你的不一样， 然后用我给的代码替换掉整个代码即可。</p>
+<p><img src="https://yangyang666.oss-cn-chengdu.aliyuncs.com/typoraImages/24068f6039b94ceeb91e98642c00e594.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">get_flops</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">imgsz</span><span class="o">=</span><span class="mi">640</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;&#34;&#34;Return a YOLO model&#39;s FLOPs.&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">try</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">model</span> <span class="o">=</span> <span class="n">de_parallel</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">p</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">        <span class="c1"># stride = max(int(model.stride.max()), 32) if hasattr(model, &#39;stride&#39;) else 32  # max stride</span>
+</span></span><span class="line"><span class="cl">        <span class="n">stride</span> <span class="o">=</span> <span class="mi">640</span>
+</span></span><span class="line"><span class="cl">        <span class="n">im</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">empty</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">stride</span><span class="p">,</span> <span class="n">stride</span><span class="p">),</span> <span class="n">device</span><span class="o">=</span><span class="n">p</span><span class="o">.</span><span class="n">device</span><span class="p">)</span>  <span class="c1"># input image in BCHW format</span>
+</span></span><span class="line"><span class="cl">        <span class="n">flops</span> <span class="o">=</span> <span class="n">thop</span><span class="o">.</span><span class="n">profile</span><span class="p">(</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">model</span><span class="p">),</span> <span class="n">inputs</span><span class="o">=</span><span class="p">[</span><span class="n">im</span><span class="p">],</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="mf">1E9</span> <span class="o">*</span> <span class="mi">2</span> <span class="k">if</span> <span class="n">thop</span> <span class="k">else</span> <span class="mi">0</span>  <span class="c1"># stride GFLOPs</span>
+</span></span><span class="line"><span class="cl">        <span class="n">imgsz</span> <span class="o">=</span> <span class="n">imgsz</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">imgsz</span><span class="p">,</span> <span class="nb">list</span><span class="p">)</span> <span class="k">else</span> <span class="p">[</span><span class="n">imgsz</span><span class="p">,</span> <span class="n">imgsz</span><span class="p">]</span>  <span class="c1"># expand if int/float</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">flops</span> <span class="o">*</span> <span class="n">imgsz</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="n">stride</span> <span class="o">*</span> <span class="n">imgsz</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">stride</span>  <span class="c1"># 640x640 GFLOPs</span>
+</span></span><span class="line"><span class="cl">    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="mi">0</span>
+</span></span></code></pre></div><hr>
+<h3 id="7-mmcv安装的解决方法">
+<a class="header-anchor" href="#7-mmcv%e5%ae%89%e8%a3%85%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%b3%95"></a>
+(7) mmcv安装的解决方法
+</h3><p>有的读者mmcv-full会安装失败是因为自身系统的编译工具有问题，也有可能是环境之间安装的有冲突 推荐大家离线安装的形式,下面的地址中大家可以找找自己的版本,下载到本地进行安装。 <a href="https://download.openmmlab.com/mmcv/dist/cu111/torch1.8.0/index.html">https://download.openmmlab.com/mmcv/dist/cu111/torch1.8.0/index.html</a> <a href="https://download.openmmlab.com/mmcv/dist/index.html">https://download.openmmlab.com/mmcv/dist/index.html</a> </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        
+
+
+
+
+
+
+<blockquote class="article-copyright">
+  
+    <p><strong><span class="icon-user icon"></span>本文作者：</strong>Louaq @ Louaq lab</p>
+  
+  
+    <p>
+      <strong><span class="icon-link icon"></span>本文链接：</strong><a href="http://localhost:1313/post/article_14/">http://localhost:1313/post/article_14/</a>
+    </p>
+  
+  
+    <p><strong><span class="icon-pencil icon"></span>本文标题：</strong>报错</p>
+  
+  
+    <p><strong><span class="icon-calendar icon"></span>本文发布时间：</strong>2024-04-21 12:00:00</p>
+  
+  
+    <p><strong><span class="icon-calendar icon"></span>本文修改时间：</strong>2024-04-21 12:00:00</p>
+  
+  
+    <p>
+      <strong><span class="icon-copyright icon"></span>本文版权：</strong>本博客所有文章除特别声明外，均采用
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener external nofollow noreferrer" target="_blank"
+        ><span class="icon-creative-commons"></span>BY-NC-SA</a
+      >
+      许可协议。转载请注明出处！
+    </p>
+    <span class="icon-creative-commons article-copyright-bg"></span>
+  
+</blockquote>
+
+      
+
+      
+
+      
+        
+
+<div class="share-wrapper">
+  
+    <a href="http://service.weibo.com/share/share.php?url=http://localhost:1313/post/article_14/&amp;appkey=&amp;title=%e6%8a%a5%e9%94%99&amp;pic=&amp;ralateUid=" target="_blank" rel="noopener noreferrer" title="报错">
+      <div class="share-icon icon icon-weibo">
+        
+      </div>
+    </a>
+  
+    <a href="http://connect.qq.com/widget/shareqq/index.html?url=http://localhost:1313/post/article_14/&amp;title=%e6%8a%a5%e9%94%99&amp;desc=%20%e4%b8%80%e3%80%81%e6%9c%ac%e6%96%87%e4%bb%8b%e7%bb%8d%20%e6%9c%ac%e6%96%87%e4%b8%ba%e4%b8%93%e6%a0%8f%e5%86%85%e8%af%bb%e8%80%85%e5%92%8c%e6%88%91%e4%b8%aa%e4%ba%ba%e5%9c%a8%e8%ae%ad%e7%bb%83YOLOv8%e6%97%b6%e9%81%87%e5%88%b0%e7%9a%84%e5%90%84%e7%a7%8d%e9%94%99%e8%af%af%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88%ef%bc%8c%e4%bd%a0%e9%81%87%e5%88%b0%e7%9a%84%e9%97%ae%e9%a2%98%e6%9c%ac%e6%96%87%e5%9f%ba%e6%9c%ac%e4%b8%8a%e9%83%bd%e8%83%bd%e5%a4%9f%e8%a7%a3%e5%86%b3%e3%80%82%0a%e4%ba%8c%e3%80%81%20%e6%8a%a5%e9%94%99%e9%97%ae%e9%a2%98%c2%a0#%20%e4%bb%a5%e4%b8%8b%e4%b8%ba%e4%b8%a4%e4%b8%aa%e9%87%8d%e8%a6%81%e5%ba%93%e7%9a%84%e7%89%88%e6%9c%ac%ef%bc%8c%e5%a4%a7%e5%ae%b6%e5%8f%af%e4%bb%a5%e5%af%b9%e5%ba%94%e4%b8%8b%e8%bd%bd%ef%bc%8c%e4%bd%bf%e7%94%a8%e6%95%99%e7%a8%8b%e6%88%91%e4%bc%9a%e6%9b%b4%e6%96%b0%ef%bc%8c%e6%97%b6%e9%97%b4%e8%bf%98%e6%b2%a1%e6%9d%a5%e5%be%97%e5%8f%8a%e5%a4%a7%e5%ae%b6%e5%8f%af%e4%bb%a5%e5%85%88%e7%9c%8b%e8%a7%86%e9%a2%91%e4%bd%bf%e7%94%a8%e3%80%82%0a%e9%a1%b9%e7%9b%ae%e7%8e%af%e5%a2%83%ef%bc%9a%0apython%20==%203.9.7%0apytorch%20==%201.12.1%0atimm%20==%200.9.12%0ammcv-full%20==%201.6.2%0a%281%29%e8%ae%ad%e7%bb%83%e8%bf%87%e7%a8%8b%e4%b8%adloss%e5%87%ba%e7%8e%b0Nan%e5%80%bc.%20%e5%8f%af%e4%bb%a5%e5%b0%9d%e8%af%95%e5%85%b3%e9%97%adAMP%e6%b7%b7%e5%90%88%e7%b2%be%e5%ba%a6%e8%ae%ad%e7%bb%83%ef%bc%8c%e5%a6%82%e4%bd%95%e5%85%b3%e9%97%adamp%e5%91%a2%e6%89%be%e5%88%b0%e5%a6%82%e4%b8%8b%e6%96%87%e4%bb%b6&amp;rsquo;ultralytics/cfg/default.yaml&amp;rsquo;%ef%bc%8c%20%e2%80%a6&amp;source=http://localhost:1313/" target="_blank" rel="noopener noreferrer" title="报错">
+      <div class="share-icon icon icon-qq">
+        
+      </div>
+    </a>
+  
+    <a href="javascript:;"  title="报错">
+      <div class="share-icon icon icon-weixin">
+        
+          <div id="share-weixin">
+            <div class="share-weixin-dom">
+              <div class="share-weixin-content">
+                <img id="share-weixin-banner"> 
+                <div id="share-weixin-title"></div>
+                <div id="share-weixin-desc"></div>
+              </div>
+              <div class="share-weixin-qrcode">
+                <div class="share-weixin-info">
+                  <div id="share-weixin-author"></div>
+                  <div id="share-weixin-theme">Powered By hugo-theme-reimu</div>
+                </div>
+                <img id="share-weixin-qr" >
+              </div>
+            </div>
+            <div class="share-weixin-canvas"></div>
+          </div>
+        
+      </div>
+    </a>
+  
+</div>
+      
+
+      
+        <a
+          data-aos="zoom-in"
+          href="http://localhost:1313/post/article_14/#comments"
+          class="article-comment-link"
+        >
+          <span
+            class="post-comments-count valine-comment-count"
+            data-xid="http//localhost1313/post/article_14/"
+            itemprop="commentCount"
+          ></span>
+          留言
+        </a>
+      
+
+      
+
+      
+
+      
+        <span
+          data-aos="zoom-in"
+          id="/post/article_14/"
+          class="leancloud_visitors article-visitor-link"
+          data-flag-title="报错"
+        >
+          <span class="leancloud-visitors-count">0</span>
+          <em class="post-meta-item-text">阅读量</em>
+        </span>
+      
+
+      
+      <ul class="article-tag-list" itemprop="keywords">
+  
+    <li class="article-tag-list-item" data-aos="zoom-in">
+      <a
+        class="article-tag-list-link"
+        href="/tags/%e8%ae%ba%e6%96%87"
+        rel="tag"
+        >论文</a
+      >
+    </li>
+  
+    <li class="article-tag-list-item" data-aos="zoom-in">
+      <a
+        class="article-tag-list-link"
+        href="/tags/python"
+        rel="tag"
+        >PYTHON</a
+      >
+    </li>
+  
+    <li class="article-tag-list-item" data-aos="zoom-in">
+      <a
+        class="article-tag-list-link"
+        href="/tags/ultralytics"
+        rel="tag"
+        >ULTRALYTICS</a
+      >
+    </li>
+  
+</ul>
+
+    </footer>
+  </div>
+  
+    
+  <nav
+    id="article-nav"
+    data-aos="fade-up"
+  >
+    
+      <div class="article-nav-link-wrap article-nav-link-left">
+        
           
-        </main>
+          
+            <img
+              data-src="https://yangyang666.oss-cn-chengdu.aliyuncs.com/images/2_Stella3_4k_3b122.jpg"
+              data-sizes="auto"
+              alt="Hello World"
+              class="lazyload"
+            />
+          
+        
+        <a href="http://localhost:1313/post/hello/"></a>
+        <div class="article-nav-caption">前一篇</div>
+        <h3 class="article-nav-title">
+          
+            Hello World
+          
+        </h3>
+      </div>
+    
+
+    
+      <div class="article-nav-link-wrap article-nav-link-right">
+        
+          <img
+            data-src="https://yangyang666.oss-cn-chengdu.aliyuncs.com/images/24Burst1_4k_1b397.jpg"
+            data-sizes="auto"
+            alt="可视化热力图"
+            class="lazyload"
+          />
+        
+        <a href="http://localhost:1313/post/article_10/"></a>
+        <div class="article-nav-caption">后一篇</div>
+        <h3 class="article-nav-title">
+          
+            可视化热力图
+          
+        </h3>
+      </div>
+    
+  </nav>
+
+
+  
+</article>
+
+  <section
+    id="comments"
+    class="vcomment"
+    data-aos="fade-up"
+  ></section>
+
+
+
+
+
+
+
+
+
+
+</section>
+        </div>
+        
+        
         
 
 
@@ -1237,7 +1279,7 @@
 
   
       
-      <script src="/js/main.js" integrity="" crossorigin="anonymous" ></script>
+      <script src="/js/main.js" ></script>
       
 
 
@@ -1250,7 +1292,7 @@
 
   
       
-      <script src="/js/aos.js" integrity="" crossorigin="anonymous" ></script>
+      <script src="/js/aos.js" ></script>
       
 
   <script>
@@ -1278,7 +1320,7 @@
 
   
       
-      <script src="/js/pjax_main.js" integrity="" crossorigin="anonymous" data-pjax></script>
+      <script src="/js/pjax_main.js" data-pjax></script>
       
 
 
@@ -1345,7 +1387,7 @@
 
   
       
-      <script src="/js/algolia_search.js" integrity="" crossorigin="anonymous" ></script>
+      <script src="/js/algolia_search.js" ></script>
       
 
 
@@ -1410,6 +1452,21 @@
 <div id="lazy-script">
   <div>
     
+      
+      
+        
+      
+      <script data-pjax>
+        window.REIMU_POST = {
+          author: "Louaq",
+          title: "报错",
+          url: "http:\/\/localhost:1313\/post\/article_14\/",
+          description: " 一、本文介绍 本文为专栏内读者和我个人在训练YOLOv8时遇到的各种错误解决方案，你遇到的问题本文基本上都能够解决。\n二、 报错问题 # 以下为两个重要库的版本，大家可以对应下载，使用教程我会更新，时间还没来得及大家可以先看视频使用。\n项目环境：\npython == 3.9.7\npytorch == 1.12.1\ntimm == 0.9.12\nmmcv-full == 1.6.2\n(1)训练过程中loss出现Nan值. 可以尝试关闭AMP混合精度训练，如何关闭amp呢找到如下文件\u0026rsquo;ultralytics\/cfg\/default.yaml\u0026rsquo;， …",
+          cover: "https:\/\/yangyang666.oss-cn-chengdu.aliyuncs.com\/images\/30_Abyss_4k_e2e25.jpg",
+        };
+      </script>
+    
+    
     
       
 
@@ -1419,7 +1476,7 @@
 
   
       
-      <script src="/js/insert_highlight.js" integrity="" crossorigin="anonymous" data-pjax></script>
+      <script src="/js/insert_highlight.js" data-pjax></script>
       
 
       
@@ -1509,6 +1566,44 @@
 
 
 
+      
+        
+
+  
+  
+  
+  
+  
+  
+  <script
+    src="https://npm.webcache.cn/qrcode@1.4.4/build/qrcode.min.js"
+    defer
+    
+    data-pjax
+    
+    integrity="sha384-0RsG1yo/crf/1Qc14sho26SXXOTngNCjgJw7fuvXBt9W/OChF/Ijx&#43;aUuBDqQwEk" crossorigin="anonymous"
+  ></script>
+
+
+        
+
+  
+  
+  
+  
+  
+  
+  <script
+    src="https://npm.webcache.cn/html-to-image@1.11.11/dist/html-to-image.js"
+    defer
+    
+    data-pjax
+    
+    integrity="sha384-UbfRVKN3/elS1r7JcK2FhmPP&#43;KlJ4CvYwbyYD7tH&#43;uTkbT9bNJr9eJeQ0FoFbAgz" crossorigin="anonymous"
+  ></script>
+
+
+      
     
     
   </div>

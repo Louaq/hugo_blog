@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Louaq lab</title>
-    <link>https://louaq.com/archives/</link>
+    <link>http://localhost:1313/archives/</link>
     <description>Recent content on Louaq lab</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://louaq.com/archives/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/archives/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

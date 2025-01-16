@@ -3,7 +3,7 @@
   lang="zh-cn"
   
 >
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8" />
 <meta
   name="viewport"
@@ -36,7 +36,7 @@
 
 
 <script>
-  window.siteConfig = JSON.parse("{\"anchor_icon\":null,\"clipboard\":{\"copyright\":{\"content\":\"本文版权：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！\",\"count\":50,\"enable\":true},\"fail\":\"复制失败 (ﾟ⊿ﾟ)ﾂ\",\"success\":\"复制成功(*^▽^*)\"},\"code_block\":{\"expand\":10},\"icon_font\":\"4552607_tq6stt6tcg\",\"outdate\":{\"daysago\":20,\"enable\":true,\"message\":\"本文最后更新于 {time}，请注意文中内容可能已经发生变化。\"}}");
+  window.siteConfig = JSON.parse("{\"anchor_icon\":null,\"clipboard\":{\"copyright\":{\"content\":\"本文版权：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！\",\"count\":50,\"enable\":true},\"fail\":\"复制失败 (ﾟ⊿ﾟ)ﾂ\",\"success\":\"复制成功(*^▽^*)\"},\"code_block\":{\"expand\":10},\"icon_font\":\"4552607_bq08450reo\",\"outdate\":{\"daysago\":20,\"enable\":true,\"message\":\"本文最后更新于 {time}，请注意文中内容可能已经发生变化。\"}}");
 </script>
 
 
@@ -84,7 +84,7 @@
 
   <link
     rel="preload"
-    href="//at.alicdn.com/t/c/font_4552607_tq6stt6tcg.woff2"
+    href="//at.alicdn.com/t/c/font_4552607_bq08450reo.woff2"
     as="font"
     type="font/woff2"
     crossorigin="anonymous"
@@ -99,9 +99,7 @@
 
 
 
-
-  
- <link rel="stylesheet" href="/css/loader.min.2ad0e9bbffb534e893c0ecefc44787a277cf851387e8ad9dccfbc3a5f0886dbe.css" />
+ <link rel="stylesheet" href="/css/loader.css" />
 
 
 
@@ -112,7 +110,7 @@
     property="og:description"
     content="waiting..."
   />
-  <meta property="og:url" content="https://louaq.com/post/visual-studio-code-and-latex/" />
+  <meta property="og:url" content="http://localhost:1313/post/visual-studio-code-and-latex/" />
   <meta
     property="og:site_name"
     content="Louaq lab"
@@ -147,9 +145,7 @@
 
 
 
-
-  
- <link rel="stylesheet" href="/css/main.min.0550ef435d094cd652ef88ba44a25939b3a724128f24d59e1f9c26fc6b0a770a.css" />
+ <link rel="stylesheet" href="/css/main.css" />
 
 
 
@@ -323,6 +319,7 @@
 <header id="header">
   
     
+    <picture></picture>
       <img fetchpriority="high" src="https://yangyang666.oss-cn-chengdu.aliyuncs.com/images/1.%E7%B4%AB%E7%81%B5%20%E5%87%A1%E4%BA%BA%E4%BF%AE%E4%BB%99%E4%BC%A0.jpeg" alt="vscode配置latex环境">
     
   
@@ -352,8 +349,233 @@
     </div>
   </div>
 </header>
-        <main id="content">
+        <div id="content"
           
+          class="sidebar-right"  >
+          <aside id="sidebar">
+  
+  
+  <div class="sidebar-wrapper wrap-sticky">
+    <div
+      class="sidebar-wrap"
+      data-aos="fade-up"
+    >
+      
+        <div class="sidebar-toc-sidebar">
+          <div class="sidebar-toc">
+  <h3 class="toc-title">文章目录</h3>
+  <div class="sidebar-toc-wrapper toc-div-class">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#1-tex-live-下载与安装">1 TeX Live 下载与安装</a></li>
+    <li><a href="#2-vscode下载与安装">2 vscode下载与安装</a></li>
+    <li><a href="#3-中文语言环境配置">3 中文语言环境配置</a></li>
+    <li><a href="#4-latex的支持插件-latex-workshop安装">4 LaTeX的支持插件 LaTeX Workshop安装</a></li>
+    <li><a href="#5-打开latex环境设置页面">5 打开LaTeX环境设置页面</a></li>
+    <li><a href="#6-latex环境的代码配置">6 LaTeX环境的代码配置</a>
+      <ul>
+        <li><a href="#61-latex配置代码展示">6.1 LaTeX配置代码展示</a></li>
+        <li><a href="#62-latex配置代码解读">6.2 LaTeX配置代码解读</a></li>
+      </ul>
+    </li>
+    <li><a href="#7-tex文件编译">7 tex文件编译</a>
+      <ul>
+        <li><a href="#71-tex测试文件下载">7.1 tex测试文件下载</a></li>
+        <li><a href="#72-tex-测试文件编译">7.2 tex 测试文件编译</a></li>
+      </ul>
+    </li>
+    <li><a href="#8-sumatrapdf-安装设置可选">8 SumatraPDF 安装设置（可选）</a>
+      <ul>
+        <li><a href="#81-sumatrapdf下载与安装">8.1 SumatraPDF下载与安装</a></li>
+        <li><a href="#82-使用sumatrapdf查看的代码配置">8.2 使用SumatraPDF查看的代码配置</a></li>
+      </ul>
+    </li>
+    <li><a href="#9-sumatrapdf-的使用">9 SumatraPDF 的使用</a></li>
+    <li><a href="#10-pdf-内部查看与外部查看的切换">10 pdf 内部查看与外部查看的切换</a></li>
+    <li><a href="#11-个人完整配置">11 个人完整配置</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+        </div>
+        <div class="sidebar-common-sidebar hidden">
+          
+<div class="sidebar-author">
+  <img
+    data-src="/avatar/b1.png"
+    data-sizes="auto"
+    alt="Louaq"
+    class="lazyload"
+  />
+  <div class="sidebar-author-name">Louaq</div>
+  <div class="sidebar-description">waiting...</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    
+    <div class="sidebar-state-number">8</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分类</div>
+    <div class="sidebar-state-number">
+      2
+    </div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>标签</div>
+    <div class="sidebar-state-number">10</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+    <div class="icon-bilibili sidebar-social-icon">
+      <a
+        href="https://space.bilibili.com/397523112"
+        itemprop="url"
+        target="_blank"
+        aria-label="bilibili"
+        rel="noopener external nofollow noreferrer"
+      ></a>
+    </div>
+  
+    <div class="icon-email sidebar-social-icon">
+      <a
+        href="mailto:beautbawj9@gmail.com"
+        itemprop="url"
+        target="_blank"
+        aria-label="email"
+        rel="noopener external nofollow noreferrer"
+      ></a>
+    </div>
+  
+    <div class="icon-github sidebar-social-icon">
+      <a
+        href="https://github.com/Louaq"
+        itemprop="url"
+        target="_blank"
+        aria-label="github"
+        rel="noopener external nofollow noreferrer"
+      ></a>
+    </div>
+  
+    <div class="icon-steam sidebar-social-icon">
+      <a
+        href="https://steamcommunity.com/profiles/76561198924508021/"
+        itemprop="url"
+        target="_blank"
+        aria-label="steam"
+        rel="noopener external nofollow noreferrer"
+      ></a>
+    </div>
+  
+    <div class="icon-weibo sidebar-social-icon">
+      <a
+        href="https://www.weibo.com/u/5769723850"
+        itemprop="url"
+        target="_blank"
+        aria-label="weibo"
+        rel="noopener external nofollow noreferrer"
+      ></a>
+    </div>
+  
+    <div class="icon-zhihu sidebar-social-icon">
+      <a
+        href="https://www.zhihu.com/people/an-ye-jing-ling-64-3"
+        itemprop="url"
+        target="_blank"
+        aria-label="zhihu"
+        rel="noopener external nofollow noreferrer"
+      ></a>
+    </div>
+  
+</div>
+<div class="sidebar-menu">
+  
+    <div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/"
+        aria-label="首页"
+      ></a>
+      <div class='sidebar-menu-icon icon rotate'>
+        
+          
+            &#xe62b;
+          
+        
+      </div>
+      <div class="sidebar-menu-link">首页</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/archives"
+        aria-label="归档"
+      ></a>
+      <div class='sidebar-menu-icon icon rotate'>
+        
+          
+            &#xe62b;
+          
+        
+      </div>
+      <div class="sidebar-menu-link">归档</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/about"
+        aria-label="关于"
+      ></a>
+      <div class='sidebar-menu-icon icon rotate'>
+        
+          
+            &#xe62b;
+          
+        
+      </div>
+      <div class="sidebar-menu-link">关于</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/friend"
+        aria-label="友链"
+      ></a>
+      <div class='sidebar-menu-icon icon rotate'>
+        
+          
+            &#xe62b;
+          
+        
+      </div>
+      <div class="sidebar-menu-link">友链</div>
+    </div>
+  
+</div>
+
+        </div>
+      
+
+      
+        <div class="sidebar-btn-wrapper" style="position:static">
+          <div class="sidebar-toc-btn current"></div>
+          <div class="sidebar-common-btn"></div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="sidebar-widget">
+    
+  </div>
+</aside>
+
           <section id="main">
   <article
   class="h-entry article"
@@ -368,7 +590,7 @@
     <div class="article-meta">
       <div class="article-date">
   <a
-    href="https://louaq.com/post/visual-studio-code-and-latex/"
+    href="http://localhost:1313/post/visual-studio-code-and-latex/"
     class="article-date-link"
     data-aos="zoom-in"
   >
@@ -1141,25 +1363,25 @@
 
 <blockquote class="article-copyright">
   
-    <p><strong>本文作者：</strong>Louaq @ Louaq lab</p>
+    <p><strong><span class="icon-user icon"></span>本文作者：</strong>Louaq @ Louaq lab</p>
   
   
     <p>
-      <strong>本文链接：</strong><a href="https://louaq.com/post/visual-studio-code-and-latex/">https://louaq.com/post/visual-studio-code-and-latex/</a>
+      <strong><span class="icon-link icon"></span>本文链接：</strong><a href="http://localhost:1313/post/visual-studio-code-and-latex/">http://localhost:1313/post/visual-studio-code-and-latex/</a>
     </p>
   
   
-    <p><strong>本文标题：</strong>vscode配置latex环境</p>
+    <p><strong><span class="icon-pencil icon"></span>本文标题：</strong>vscode配置latex环境</p>
   
   
-    <p><strong>本文发布时间：</strong>2024-12-29 13:24:01</p>
+    <p><strong><span class="icon-calendar icon"></span>本文发布时间：</strong>2024-12-29 13:24:01</p>
   
   
-    <p><strong>本文修改时间：</strong>2024-12-29 13:24:01</p>
+    <p><strong><span class="icon-calendar icon"></span>本文修改时间：</strong>2024-12-29 13:24:01</p>
   
   
     <p>
-      <strong>本文版权：</strong>本博客所有文章除特别声明外，均采用
+      <strong><span class="icon-copyright icon"></span>本文版权：</strong>本博客所有文章除特别声明外，均采用
       <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener external nofollow noreferrer" target="_blank"
         ><span class="icon-creative-commons"></span>BY-NC-SA</a
       >
@@ -1174,14 +1396,58 @@
       
 
       
+        
+
+<div class="share-wrapper">
+  
+    <a href="http://service.weibo.com/share/share.php?url=http://localhost:1313/post/visual-studio-code-and-latex/&amp;appkey=&amp;title=vscode%e9%85%8d%e7%bd%aelatex%e7%8e%af%e5%a2%83&amp;pic=&amp;ralateUid=" target="_blank" rel="noopener noreferrer" title="vscode配置latex环境">
+      <div class="share-icon icon icon-weibo">
+        
+      </div>
+    </a>
+  
+    <a href="http://connect.qq.com/widget/shareqq/index.html?url=http://localhost:1313/post/visual-studio-code-and-latex/&amp;title=vscode%e9%85%8d%e7%bd%aelatex%e7%8e%af%e5%a2%83&amp;desc=%20%e5%89%8d%e8%a8%80%20LaTeX%20%e4%bd%9c%e4%b8%ba%e4%b8%80%e7%a7%8d%e5%bc%ba%e5%a4%a7%e7%9a%84%e6%8e%92%e7%89%88%e7%b3%bb%e7%bb%9f%ef%bc%8c%e5%af%b9%e4%ba%8e%e7%90%86%e5%b7%a5%e7%a7%91%ef%bc%8c%e7%89%b9%e5%88%ab%e6%98%af%e5%85%ac%e5%bc%8f%e6%af%94%e8%be%83%e5%a4%9a%e7%9a%84%e6%95%b0%e5%ad%a6%e4%b8%93%e4%b8%9a%ef%bc%88%e7%a7%83%e5%a4%b4%e4%b8%93%e4%b8%9a%ef%bc%89%ef%bc%8c%e5%85%b6%e9%87%8d%e8%a6%81%e6%80%a7%e8%87%aa%e4%b8%8d%e5%bf%85%e5%a4%9a%e8%af%b4%ef%bc%8c%e4%b8%8d%e5%9c%a8%e6%9c%ac%e6%96%87%e6%8e%a2%e8%ae%a8%e8%8c%83%e5%9b%b4%e4%b9%8b%e5%86%85%e3%80%82%0a%e8%80%8c%e9%80%89%e6%8b%a9%e4%b8%80%e4%b8%aa%e6%af%94%e8%be%83%e5%a5%bd%e7%9a%84%e7%bc%96%e8%af%91%e5%99%a8%e6%98%af%e5%be%88%e9%87%8d%e8%a6%81%e7%9a%84%ef%bc%8c%e8%87%b3%e5%b0%91%e5%af%b9%e7%ac%94%e8%80%85%e8%80%8c%e8%a8%80%e6%98%af%e5%a6%82%e6%ad%a4%e3%80%82%e7%ac%94%e8%80%85%e5%89%8d%e6%9c%9f%e4%bd%bf%e7%94%a8%e7%9a%84%e6%98%afTeXstudio%e8%bf%9b%e8%a1%8c%e6%96%87%e6%a1%a3%e7%9a%84%e7%bc%96%e8%af%91%e7%9a%84%ef%bc%8c%e4%bd%86%e6%98%af%e5%85%b6%e7%bc%96%e8%af%91%e9%80%9f%e5%ba%a6%e6%af%94%e8%be%83%e6%85%a2%ef%bc%8c%e5%b9%b6%e4%b8%94%e9%a1%b5%e9%9d%a2%e4%b8%8d%e6%98%af%e5%be%88%e7%be%8e%e8%a7%82%e3%80%82%e6%9c%80%e8%ae%a9%e4%ba%ba%e5%a4%b4%e7%96%bc%e7%9a%84%e6%98%af%ef%bc%8c%e5%bd%93%e5%85%ac%e5%bc%8f%e6%af%94%e8%be%83%e9%95%bf%e7%9a%84%e6%97%b6%e5%80%99%ef%bc%8c%e4%bd%bf%e7%94%a8%e7%9a%84%e6%8b%ac%e5%8f%b7%e5%b0%b1%e6%af%94%e8%be%83%e5%a4%9a%ef%bc%8c%e4%bd%86Texstudio%e7%9a%84%e4%bb%a3%e7%a0%81%e9%ab%98%e4%ba%ae%e5%8a%9f%e8%83%bd%e5%ae%9e%e5%9c%a8%e6%98%af%e2%80%a6%ef%bc%88%e5%ae%83%e5%af%b9%e4%ba%8e%e6%8b%ac%e5%8f%b7%e6%a0%b9%e6%9c%ac%e5%b0%b1%e6%b2%a1%e6%9c%89%e9%ab%98%e4%ba%ae%ef%bc%8c%e5%a4%b4%e7%a7%83%ef%bc%89%0a%e8%80%8cVisual%20Studio%20Code%e5%91%a2%ef%bc%9f%e8%af%9d%e4%b8%8d%e5%a4%9a%e8%af%b4%ef%bc%8c%e7%9b%b4%e6%8e%a5%e4%b8%8a%e5%9b%be%ef%bc%81%0a%e5%8f%af%e4%bb%a5%e7%9c%8b%e5%88%b0%ef%bc%8c%e5%ae%83%e4%b8%8d%e4%bb%85%e8%83%bd%e5%a4%9f%e5%af%b9%e4%bb%a3%e7%a0%81%e9%ab%98%e4%ba%ae%ef%bc%8c%e4%b8%8d%e5%90%8c%e7%ba%a7%e5%88%ab%e6%8b%ac%e5%8f%b7%e7%94%a8%e4%b8%8d%e5%90%8c%e9%a2%9c%e8%89%b2%e6%a0%87%e6%b3%a8%e4%ba%86%ef%bc%8c%e9%a2%9c%e5%80%bc%e4%b9%9f%e5%be%88%e9%ab%98%e3%80%82%e4%b8%94%20vscode%20%e6%9c%80%e7%aa%81%e5%87%ba%e7%9a%84%e7%89%b9%e7%82%b9%e5%b0%b1%e6%98%af%e5%85%b6%20%e2%80%a6&amp;source=http://localhost:1313/" target="_blank" rel="noopener noreferrer" title="vscode配置latex环境">
+      <div class="share-icon icon icon-qq">
+        
+      </div>
+    </a>
+  
+    <a href="javascript:;"  title="vscode配置latex环境">
+      <div class="share-icon icon icon-weixin">
+        
+          <div id="share-weixin">
+            <div class="share-weixin-dom">
+              <div class="share-weixin-content">
+                <img id="share-weixin-banner"> 
+                <div id="share-weixin-title"></div>
+                <div id="share-weixin-desc"></div>
+              </div>
+              <div class="share-weixin-qrcode">
+                <div class="share-weixin-info">
+                  <div id="share-weixin-author"></div>
+                  <div id="share-weixin-theme">Powered By hugo-theme-reimu</div>
+                </div>
+                <img id="share-weixin-qr" >
+              </div>
+            </div>
+            <div class="share-weixin-canvas"></div>
+          </div>
+        
+      </div>
+    </a>
+  
+</div>
+      
+
+      
         <a
           data-aos="zoom-in"
-          href="https://louaq.com/post/visual-studio-code-and-latex/#comments"
+          href="http://localhost:1313/post/visual-studio-code-and-latex/#comments"
           class="article-comment-link"
         >
           <span
             class="post-comments-count valine-comment-count"
-            data-xid="https//louaq.com/post/visual-studio-code-and-latex/"
+            data-xid="http//localhost1313/post/visual-studio-code-and-latex/"
             itemprop="commentCount"
           ></span>
           留言
@@ -1248,7 +1514,7 @@
             />
           
         
-        <a href="https://louaq.com/post/article_1/"></a>
+        <a href="http://localhost:1313/post/article_1/"></a>
         <div class="article-nav-caption">前一篇</div>
         <h3 class="article-nav-title">
           
@@ -1281,233 +1547,9 @@
 
 
 </section>
-          
-            <aside id="sidebar">
-  
-  
-  <div class="sidebar-wrapper wrap-sticky">
-    <div
-      class="sidebar-wrap"
-      data-aos="fade-up"
-    >
-      
-        <div class="sidebar-toc-sidebar">
-          <div class="sidebar-toc">
-  <h3 class="toc-title">文章目录</h3>
-  <div class="sidebar-toc-wrapper toc-div-class">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#前言">前言</a></li>
-    <li><a href="#1-tex-live-下载与安装">1 TeX Live 下载与安装</a></li>
-    <li><a href="#2-vscode下载与安装">2 vscode下载与安装</a></li>
-    <li><a href="#3-中文语言环境配置">3 中文语言环境配置</a></li>
-    <li><a href="#4-latex的支持插件-latex-workshop安装">4 LaTeX的支持插件 LaTeX Workshop安装</a></li>
-    <li><a href="#5-打开latex环境设置页面">5 打开LaTeX环境设置页面</a></li>
-    <li><a href="#6-latex环境的代码配置">6 LaTeX环境的代码配置</a>
-      <ul>
-        <li><a href="#61-latex配置代码展示">6.1 LaTeX配置代码展示</a></li>
-        <li><a href="#62-latex配置代码解读">6.2 LaTeX配置代码解读</a></li>
-      </ul>
-    </li>
-    <li><a href="#7-tex文件编译">7 tex文件编译</a>
-      <ul>
-        <li><a href="#71-tex测试文件下载">7.1 tex测试文件下载</a></li>
-        <li><a href="#72-tex-测试文件编译">7.2 tex 测试文件编译</a></li>
-      </ul>
-    </li>
-    <li><a href="#8-sumatrapdf-安装设置可选">8 SumatraPDF 安装设置（可选）</a>
-      <ul>
-        <li><a href="#81-sumatrapdf下载与安装">8.1 SumatraPDF下载与安装</a></li>
-        <li><a href="#82-使用sumatrapdf查看的代码配置">8.2 使用SumatraPDF查看的代码配置</a></li>
-      </ul>
-    </li>
-    <li><a href="#9-sumatrapdf-的使用">9 SumatraPDF 的使用</a></li>
-    <li><a href="#10-pdf-内部查看与外部查看的切换">10 pdf 内部查看与外部查看的切换</a></li>
-    <li><a href="#11-个人完整配置">11 个人完整配置</a></li>
-  </ul>
-</nav>
-  </div>
-</div>
         </div>
-        <div class="sidebar-common-sidebar hidden">
-          
-<div class="sidebar-author">
-  <img
-    data-src="/avatar/b1.png"
-    data-sizes="auto"
-    alt="Louaq"
-    class="lazyload"
-  />
-  <div class="sidebar-author-name">Louaq</div>
-  <div class="sidebar-description">waiting...</div>
-</div>
-<div class="sidebar-state">
-  <div class="sidebar-state-article">
-    <div>文章</div>
-    
-    <div class="sidebar-state-number">8</div>
-  </div>
-  <div class="sidebar-state-category">
-    <div>分类</div>
-    <div class="sidebar-state-number">
-      2
-    </div>
-  </div>
-  <div class="sidebar-state-tag">
-    <div>标签</div>
-    <div class="sidebar-state-number">10</div>
-  </div>
-</div>
-<div class="sidebar-social">
-  
-    <div class="icon-bilibili sidebar-social-icon">
-      <a
-        href="https://space.bilibili.com/397523112"
-        itemprop="url"
-        target="_blank"
-        aria-label="bilibili"
-        rel="noopener external nofollow noreferrer"
-      ></a>
-    </div>
-  
-    <div class="icon-email sidebar-social-icon">
-      <a
-        href="mailto:beautbawj9@gmail.com"
-        itemprop="url"
-        target="_blank"
-        aria-label="email"
-        rel="noopener external nofollow noreferrer"
-      ></a>
-    </div>
-  
-    <div class="icon-github sidebar-social-icon">
-      <a
-        href="https://github.com/Louaq"
-        itemprop="url"
-        target="_blank"
-        aria-label="github"
-        rel="noopener external nofollow noreferrer"
-      ></a>
-    </div>
-  
-    <div class="icon-steam sidebar-social-icon">
-      <a
-        href="https://steamcommunity.com/profiles/76561198924508021/"
-        itemprop="url"
-        target="_blank"
-        aria-label="steam"
-        rel="noopener external nofollow noreferrer"
-      ></a>
-    </div>
-  
-    <div class="icon-weibo sidebar-social-icon">
-      <a
-        href="https://www.weibo.com/u/5769723850"
-        itemprop="url"
-        target="_blank"
-        aria-label="weibo"
-        rel="noopener external nofollow noreferrer"
-      ></a>
-    </div>
-  
-    <div class="icon-zhihu sidebar-social-icon">
-      <a
-        href="https://www.zhihu.com/people/an-ye-jing-ling-64-3"
-        itemprop="url"
-        target="_blank"
-        aria-label="zhihu"
-        rel="noopener external nofollow noreferrer"
-      ></a>
-    </div>
-  
-</div>
-<div class="sidebar-menu">
-  
-    <div class="sidebar-menu-link-wrap">
-      <a
-        class="sidebar-menu-link-dummy"
-        href="/"
-        aria-label="首页"
-      ></a>
-      <div class='sidebar-menu-icon icon rotate'>
         
-          
-            &#xe62b;
-          
         
-      </div>
-      <div class="sidebar-menu-link">首页</div>
-    </div>
-  
-    <div class="sidebar-menu-link-wrap">
-      <a
-        class="sidebar-menu-link-dummy"
-        href="/archives"
-        aria-label="归档"
-      ></a>
-      <div class='sidebar-menu-icon icon rotate'>
-        
-          
-            &#xe62b;
-          
-        
-      </div>
-      <div class="sidebar-menu-link">归档</div>
-    </div>
-  
-    <div class="sidebar-menu-link-wrap">
-      <a
-        class="sidebar-menu-link-dummy"
-        href="/about"
-        aria-label="关于"
-      ></a>
-      <div class='sidebar-menu-icon icon rotate'>
-        
-          
-            &#xe62b;
-          
-        
-      </div>
-      <div class="sidebar-menu-link">关于</div>
-    </div>
-  
-    <div class="sidebar-menu-link-wrap">
-      <a
-        class="sidebar-menu-link-dummy"
-        href="/friend"
-        aria-label="友链"
-      ></a>
-      <div class='sidebar-menu-icon icon rotate'>
-        
-          
-            &#xe62b;
-          
-        
-      </div>
-      <div class="sidebar-menu-link">友链</div>
-    </div>
-  
-</div>
-
-        </div>
-      
-
-      
-        <div class="sidebar-btn-wrapper" style="position:static">
-          <div class="sidebar-toc-btn current"></div>
-          <div class="sidebar-common-btn"></div>
-        </div>
-      
-    </div>
-  </div>
-
-  <div class="sidebar-widget">
-    
-  </div>
-</aside>
-
-          
-        </main>
         
 
 
@@ -1889,7 +1931,7 @@
 
   
       
-      <script src="/js/main.js" integrity="" crossorigin="anonymous" ></script>
+      <script src="/js/main.js" ></script>
       
 
 
@@ -1902,7 +1944,7 @@
 
   
       
-      <script src="/js/aos.js" integrity="" crossorigin="anonymous" ></script>
+      <script src="/js/aos.js" ></script>
       
 
   <script>
@@ -1930,7 +1972,7 @@
 
   
       
-      <script src="/js/pjax_main.js" integrity="" crossorigin="anonymous" data-pjax></script>
+      <script src="/js/pjax_main.js" data-pjax></script>
       
 
 
@@ -1997,7 +2039,7 @@
 
   
       
-      <script src="/js/algolia_search.js" integrity="" crossorigin="anonymous" ></script>
+      <script src="/js/algolia_search.js" ></script>
       
 
 
@@ -2062,6 +2104,21 @@
 <div id="lazy-script">
   <div>
     
+      
+      
+        
+      
+      <script data-pjax>
+        window.REIMU_POST = {
+          author: "Louaq",
+          title: "vscode配置latex环境",
+          url: "http:\/\/localhost:1313\/post\/visual-studio-code-and-latex\/",
+          description: " 前言 LaTeX 作为一种强大的排版系统，对于理工科，特别是公式比较多的数学专业（秃头专业），其重要性自不必多说，不在本文探讨范围之内。\n而选择一个比较好的编译器是很重要的，至少对笔者而言是如此。笔者前期使用的是TeXstudio进行文档的编译的，但是其编译速度比较慢，并且页面不是很美观。最让人头疼的是，当公式比较长的时候，使用的括号就比较多，但Texstudio的代码高亮功能实在是…（它对于括号根本就没有高亮，头秃）\n而Visual Studio Code呢？话不多说，直接上图！\n可以看到，它不仅能够对代码高亮，不同级别括号用不同颜色标注了，颜值也很高。且 vscode 最突出的特点就是其 …",
+          cover: "https:\/\/yangyang666.oss-cn-chengdu.aliyuncs.com\/images\/1.%E7%B4%AB%E7%81%B5%20%E5%87%A1%E4%BA%BA%E4%BF%AE%E4%BB%99%E4%BC%A0.jpeg",
+        };
+      </script>
+    
+    
     
       
 
@@ -2071,7 +2128,7 @@
 
   
       
-      <script src="/js/insert_highlight.js" integrity="" crossorigin="anonymous" data-pjax></script>
+      <script src="/js/insert_highlight.js" data-pjax></script>
       
 
       
@@ -2161,6 +2218,44 @@
 
 
 
+      
+        
+
+  
+  
+  
+  
+  
+  
+  <script
+    src="https://npm.webcache.cn/qrcode@1.4.4/build/qrcode.min.js"
+    defer
+    
+    data-pjax
+    
+    integrity="sha384-0RsG1yo/crf/1Qc14sho26SXXOTngNCjgJw7fuvXBt9W/OChF/Ijx&#43;aUuBDqQwEk" crossorigin="anonymous"
+  ></script>
+
+
+        
+
+  
+  
+  
+  
+  
+  
+  <script
+    src="https://npm.webcache.cn/html-to-image@1.11.11/dist/html-to-image.js"
+    defer
+    
+    data-pjax
+    
+    integrity="sha384-UbfRVKN3/elS1r7JcK2FhmPP&#43;KlJ4CvYwbyYD7tH&#43;uTkbT9bNJr9eJeQ0FoFbAgz" crossorigin="anonymous"
+  ></script>
+
+
+      
     
     
   </div>

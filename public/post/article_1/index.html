@@ -3,7 +3,7 @@
   lang="zh-cn"
   
 >
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8" />
 <meta
   name="viewport"
@@ -36,7 +36,7 @@
 
 
 <script>
-  window.siteConfig = JSON.parse("{\"anchor_icon\":null,\"clipboard\":{\"copyright\":{\"content\":\"本文版权：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！\",\"count\":50,\"enable\":true},\"fail\":\"复制失败 (ﾟ⊿ﾟ)ﾂ\",\"success\":\"复制成功(*^▽^*)\"},\"code_block\":{\"expand\":10},\"icon_font\":\"4552607_tq6stt6tcg\",\"outdate\":{\"daysago\":20,\"enable\":true,\"message\":\"本文最后更新于 {time}，请注意文中内容可能已经发生变化。\"}}");
+  window.siteConfig = JSON.parse("{\"anchor_icon\":null,\"clipboard\":{\"copyright\":{\"content\":\"本文版权：本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！\",\"count\":50,\"enable\":true},\"fail\":\"复制失败 (ﾟ⊿ﾟ)ﾂ\",\"success\":\"复制成功(*^▽^*)\"},\"code_block\":{\"expand\":10},\"icon_font\":\"4552607_bq08450reo\",\"outdate\":{\"daysago\":20,\"enable\":true,\"message\":\"本文最后更新于 {time}，请注意文中内容可能已经发生变化。\"}}");
 </script>
 
 
@@ -84,7 +84,7 @@
 
   <link
     rel="preload"
-    href="//at.alicdn.com/t/c/font_4552607_tq6stt6tcg.woff2"
+    href="//at.alicdn.com/t/c/font_4552607_bq08450reo.woff2"
     as="font"
     type="font/woff2"
     crossorigin="anonymous"
@@ -99,9 +99,7 @@
 
 
 
-
-  
- <link rel="stylesheet" href="/css/loader.min.2ad0e9bbffb534e893c0ecefc44787a277cf851387e8ad9dccfbc3a5f0886dbe.css" />
+ <link rel="stylesheet" href="/css/loader.css" />
 
 
 
@@ -112,7 +110,7 @@
     property="og:description"
     content="waiting..."
   />
-  <meta property="og:url" content="https://louaq.com/post/article_1/" />
+  <meta property="og:url" content="http://localhost:1313/post/article_1/" />
   <meta
     property="og:site_name"
     content="Louaq lab"
@@ -147,9 +145,7 @@
 
 
 
-
-  
- <link rel="stylesheet" href="/css/main.min.0550ef435d094cd652ef88ba44a25939b3a724128f24d59e1f9c26fc6b0a770a.css" />
+ <link rel="stylesheet" href="/css/main.css" />
 
 
 
@@ -322,7 +318,12 @@
 </div>
 <header id="header">
   
-    <img fetchpriority="high" src="/images/banner.jpg" alt="YOLOv8的训练自己的数据集">
+    <picture>
+      
+    </picture>
+    
+      <img fetchpriority="high" src="/images/banner.jpg" alt="YOLOv8的训练自己的数据集">
+    
   
 
   <div id="header-outer">
@@ -350,8 +351,224 @@
     </div>
   </div>
 </header>
-        <main id="content">
+        <div id="content"
           
+          class="sidebar-right"  >
+          <aside id="sidebar">
+  
+  
+  <div class="sidebar-wrapper wrap-sticky">
+    <div
+      class="sidebar-wrap"
+      data-aos="fade-up"
+    >
+      
+        <div class="sidebar-toc-sidebar">
+          <div class="sidebar-toc">
+  <h3 class="toc-title">文章目录</h3>
+  <div class="sidebar-toc-wrapper toc-div-class">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#一yolov8的简介">一、YOLOv8的简介</a></li>
+    <li><a href="#二yolov8相对于yolov5的核心改动">二、YOLOv8相对于Yolov5的核心改动</a></li>
+    <li><a href="#三yolov8的网络结构"><strong>三、YOLOv8的网络结构</strong></a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#四环境搭建">四、环境搭建</a></li>
+    <li><a href="#五数据集获取">五、数据集获取</a></li>
+    <li><a href="#六模型获取">六、模型获取</a></li>
+    <li><a href="#七模型训练">七、模型训练</a>
+      <ul>
+        <li><a href="#71-训练的三种方式">7.1 训练的三种方式</a></li>
+      </ul>
+    </li>
+    <li><a href="#八模型验证测试">八、模型验证/测试 </a></li>
+    <li><a href="#九模型推理">九、模型推理</a></li>
+    <li><a href="#十模型输出">十、模型输出</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+        </div>
+        <div class="sidebar-common-sidebar hidden">
+          
+<div class="sidebar-author">
+  <img
+    data-src="/avatar/b1.png"
+    data-sizes="auto"
+    alt="Louaq"
+    class="lazyload"
+  />
+  <div class="sidebar-author-name">Louaq</div>
+  <div class="sidebar-description">waiting...</div>
+</div>
+<div class="sidebar-state">
+  <div class="sidebar-state-article">
+    <div>文章</div>
+    
+    <div class="sidebar-state-number">8</div>
+  </div>
+  <div class="sidebar-state-category">
+    <div>分类</div>
+    <div class="sidebar-state-number">
+      2
+    </div>
+  </div>
+  <div class="sidebar-state-tag">
+    <div>标签</div>
+    <div class="sidebar-state-number">10</div>
+  </div>
+</div>
+<div class="sidebar-social">
+  
+    <div class="icon-bilibili sidebar-social-icon">
+      <a
+        href="https://space.bilibili.com/397523112"
+        itemprop="url"
+        target="_blank"
+        aria-label="bilibili"
+        rel="noopener external nofollow noreferrer"
+      ></a>
+    </div>
+  
+    <div class="icon-email sidebar-social-icon">
+      <a
+        href="mailto:beautbawj9@gmail.com"
+        itemprop="url"
+        target="_blank"
+        aria-label="email"
+        rel="noopener external nofollow noreferrer"
+      ></a>
+    </div>
+  
+    <div class="icon-github sidebar-social-icon">
+      <a
+        href="https://github.com/Louaq"
+        itemprop="url"
+        target="_blank"
+        aria-label="github"
+        rel="noopener external nofollow noreferrer"
+      ></a>
+    </div>
+  
+    <div class="icon-steam sidebar-social-icon">
+      <a
+        href="https://steamcommunity.com/profiles/76561198924508021/"
+        itemprop="url"
+        target="_blank"
+        aria-label="steam"
+        rel="noopener external nofollow noreferrer"
+      ></a>
+    </div>
+  
+    <div class="icon-weibo sidebar-social-icon">
+      <a
+        href="https://www.weibo.com/u/5769723850"
+        itemprop="url"
+        target="_blank"
+        aria-label="weibo"
+        rel="noopener external nofollow noreferrer"
+      ></a>
+    </div>
+  
+    <div class="icon-zhihu sidebar-social-icon">
+      <a
+        href="https://www.zhihu.com/people/an-ye-jing-ling-64-3"
+        itemprop="url"
+        target="_blank"
+        aria-label="zhihu"
+        rel="noopener external nofollow noreferrer"
+      ></a>
+    </div>
+  
+</div>
+<div class="sidebar-menu">
+  
+    <div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/"
+        aria-label="首页"
+      ></a>
+      <div class='sidebar-menu-icon icon rotate'>
+        
+          
+            &#xe62b;
+          
+        
+      </div>
+      <div class="sidebar-menu-link">首页</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/archives"
+        aria-label="归档"
+      ></a>
+      <div class='sidebar-menu-icon icon rotate'>
+        
+          
+            &#xe62b;
+          
+        
+      </div>
+      <div class="sidebar-menu-link">归档</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/about"
+        aria-label="关于"
+      ></a>
+      <div class='sidebar-menu-icon icon rotate'>
+        
+          
+            &#xe62b;
+          
+        
+      </div>
+      <div class="sidebar-menu-link">关于</div>
+    </div>
+  
+    <div class="sidebar-menu-link-wrap">
+      <a
+        class="sidebar-menu-link-dummy"
+        href="/friend"
+        aria-label="友链"
+      ></a>
+      <div class='sidebar-menu-icon icon rotate'>
+        
+          
+            &#xe62b;
+          
+        
+      </div>
+      <div class="sidebar-menu-link">友链</div>
+    </div>
+  
+</div>
+
+        </div>
+      
+
+      
+        <div class="sidebar-btn-wrapper" style="position:static">
+          <div class="sidebar-toc-btn current"></div>
+          <div class="sidebar-common-btn"></div>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="sidebar-widget">
+    
+  </div>
+</aside>
+
           <section id="main">
   <article
   class="h-entry article"
@@ -366,7 +583,7 @@
     <div class="article-meta">
       <div class="article-date">
   <a
-    href="https://louaq.com/post/article_1/"
+    href="http://localhost:1313/post/article_1/"
     class="article-date-link"
     data-aos="zoom-in"
   >
@@ -1060,25 +1277,25 @@ Neck部分通常会使用上采样和下采样操作，以调整特征图的尺�
 
 <blockquote class="article-copyright">
   
-    <p><strong>本文作者：</strong>Louaq @ Louaq lab</p>
+    <p><strong><span class="icon-user icon"></span>本文作者：</strong>Louaq @ Louaq lab</p>
   
   
     <p>
-      <strong>本文链接：</strong><a href="https://louaq.com/post/article_1/">https://louaq.com/post/article_1/</a>
+      <strong><span class="icon-link icon"></span>本文链接：</strong><a href="http://localhost:1313/post/article_1/">http://localhost:1313/post/article_1/</a>
     </p>
   
   
-    <p><strong>本文标题：</strong>YOLOv8的训练自己的数据集</p>
+    <p><strong><span class="icon-pencil icon"></span>本文标题：</strong>YOLOv8的训练自己的数据集</p>
   
   
-    <p><strong>本文发布时间：</strong>2024-11-25 12:00:00</p>
+    <p><strong><span class="icon-calendar icon"></span>本文发布时间：</strong>2024-11-25 12:00:00</p>
   
   
-    <p><strong>本文修改时间：</strong>2024-11-25 12:00:00</p>
+    <p><strong><span class="icon-calendar icon"></span>本文修改时间：</strong>2024-11-25 12:00:00</p>
   
   
     <p>
-      <strong>本文版权：</strong>本博客所有文章除特别声明外，均采用
+      <strong><span class="icon-copyright icon"></span>本文版权：</strong>本博客所有文章除特别声明外，均采用
       <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" rel="noopener external nofollow noreferrer" target="_blank"
         ><span class="icon-creative-commons"></span>BY-NC-SA</a
       >
@@ -1093,14 +1310,58 @@ Neck部分通常会使用上采样和下采样操作，以调整特征图的尺�
       
 
       
+        
+
+<div class="share-wrapper">
+  
+    <a href="http://service.weibo.com/share/share.php?url=http://localhost:1313/post/article_1/&amp;appkey=&amp;title=YOLOv8%e7%9a%84%e8%ae%ad%e7%bb%83%e8%87%aa%e5%b7%b1%e7%9a%84%e6%95%b0%e6%8d%ae%e9%9b%86&amp;pic=&amp;ralateUid=" target="_blank" rel="noopener noreferrer" title="YOLOv8的训练自己的数据集">
+      <div class="share-icon icon icon-weibo">
+        
+      </div>
+    </a>
+  
+    <a href="http://connect.qq.com/widget/shareqq/index.html?url=http://localhost:1313/post/article_1/&amp;title=YOLOv8%e7%9a%84%e8%ae%ad%e7%bb%83%e8%87%aa%e5%b7%b1%e7%9a%84%e6%95%b0%e6%8d%ae%e9%9b%86&amp;desc=%20%e4%b8%80%e3%80%81YOLOv8%e7%9a%84%e7%ae%80%e4%bb%8b%20YOLO%ef%bc%88You%20Only%20Look%20Once%ef%bc%89%e7%b3%bb%e5%88%97%e7%ae%97%e6%b3%95%e5%9b%a0%e5%85%b6%e9%ab%98%e6%95%88%e3%80%81%e5%87%86%e7%a1%ae%e7%ad%89%e7%89%b9%e7%82%b9%e8%80%8c%e5%a4%87%e5%8f%97%e7%9e%a9%e7%9b%ae%e3%80%82%e7%94%b12023%e5%b9%b4Ultralytics%e5%85%ac%e5%8f%b8%e5%8f%91%e5%b8%83%e4%ba%86YOLO%e7%9a%84%e6%9c%80%e6%96%b0%e7%89%88%e6%9c%acYOLOv8%e6%98%af%e7%bb%93%e5%90%88%e5%89%8d%e5%87%a0%e4%bb%a3YOLO%e7%9a%84%e5%9f%ba%e7%a1%80%e4%b8%8a%e7%9a%84%e4%b8%80%e4%b8%aa%e8%9e%8d%e5%90%88%e6%94%b9%e8%bf%9b%e7%89%88%e3%80%82%0a%e6%9c%ac%e6%96%87YOLOv8%e7%bd%91%e7%bb%9c%e7%bb%93%e6%9e%84/%e7%8e%af%e5%a2%83%e6%90%ad%e5%bb%ba/%e6%95%b0%e6%8d%ae%e9%9b%86%e8%8e%b7%e5%8f%96/%e8%ae%ad%e7%bb%83/%e6%8e%a8%e7%90%86/%e9%aa%8c%e8%af%81/%e5%af%bc%e5%87%ba/%e9%83%a8%e7%bd%b2%ef%bc%8c%e4%bb%8e%e7%bd%91%e7%bb%9c%e7%bb%93%e6%9e%84%e7%9a%84%e8%ae%b2%e8%a7%a3%e4%bb%8e%e6%a8%a1%e5%9e%8b%e7%9a%84%e7%bd%91%e7%bb%9c%e7%bb%93%e6%9e%84%e8%ae%b2%e8%a7%a3%e5%88%b0%e6%a8%a1%e5%9e%8b%e7%9a%84%e9%83%a8%e7%bd%b2%e9%83%bd%e6%9c%89%e8%af%a6%e7%bb%86%e4%bb%8b%e7%bb%8d%ef%bc%8c%e5%90%8c%e6%97%b6%e5%9c%a8%e6%9c%ac%e4%b8%93%e6%a0%8f%e4%b8%ad%e8%bf%98%e5%8c%85%e6%8b%acYOLOv8%e6%a8%a1%e5%9e%8b%e7%b3%bb%e5%88%97%e7%9a%84%e6%94%b9%e8%bf%9b%e5%8c%85%e6%8b%ac%e4%b8%aa%e4%ba%ba%e6%8f%90%e5%87%ba%e7%9a%84%e5%88%9b%e6%96%b0%e7%82%b9%ef%bc%8c%e4%bc%a0%e7%bb%9f%e5%8d%b7%e7%a7%af%e3%80%81%e6%b3%a8%e6%84%8f%e5%8a%9b%e6%9c%ba%e5%88%b6%e3%80%81%e6%8d%9f%e5%a4%b1%e5%87%bd%e6%95%b0%e7%9a%84%e4%bf%ae%e6%94%b9%e6%95%99%e7%a8%8b%ef%bc%8c%e8%83%bd%e5%a4%9f%e5%b8%ae%e5%8a%a9%e4%bd%a0%e7%9a%84%e8%ae%ba%e6%96%87%e8%8e%b7%e5%be%97%e5%88%9b%e6%96%b0%e7%82%b9%e3%80%82%0a%e4%ba%8c%e3%80%81YOLOv8%e7%9b%b8%e5%af%b9%e4%ba%8eYolov5%e7%9a%84%e6%a0%b8%e5%bf%83%e6%94%b9%e5%8a%a8%20%e4%bb%8eYOLOv8%e7%9a%84%e7%bd%91%e7%bb%9c%e7%bb%93%e6%9e%84%e5%8f%af%e4%bb%a5%e7%9c%8b%e5%87%ba,%e5%85%b6%e5%bb%b6%20%e2%80%a6&amp;source=http://localhost:1313/" target="_blank" rel="noopener noreferrer" title="YOLOv8的训练自己的数据集">
+      <div class="share-icon icon icon-qq">
+        
+      </div>
+    </a>
+  
+    <a href="javascript:;"  title="YOLOv8的训练自己的数据集">
+      <div class="share-icon icon icon-weixin">
+        
+          <div id="share-weixin">
+            <div class="share-weixin-dom">
+              <div class="share-weixin-content">
+                <img id="share-weixin-banner"> 
+                <div id="share-weixin-title"></div>
+                <div id="share-weixin-desc"></div>
+              </div>
+              <div class="share-weixin-qrcode">
+                <div class="share-weixin-info">
+                  <div id="share-weixin-author"></div>
+                  <div id="share-weixin-theme">Powered By hugo-theme-reimu</div>
+                </div>
+                <img id="share-weixin-qr" >
+              </div>
+            </div>
+            <div class="share-weixin-canvas"></div>
+          </div>
+        
+      </div>
+    </a>
+  
+</div>
+      
+
+      
         <a
           data-aos="zoom-in"
-          href="https://louaq.com/post/article_1/#comments"
+          href="http://localhost:1313/post/article_1/#comments"
           class="article-comment-link"
         >
           <span
             class="post-comments-count valine-comment-count"
-            data-xid="https//louaq.com/post/article_1/"
+            data-xid="http//localhost1313/post/article_1/"
             itemprop="commentCount"
           ></span>
           留言
@@ -1169,14 +1430,14 @@ Neck部分通常会使用上采样和下采样操作，以调整特征图的尺�
           
           
             <img
-              data-src="https://yangyang666.oss-cn-chengdu.aliyuncs.com/wordpress/%E4%BA%8C%E6%AC%A1%E5%85%83%E7%BB%9D%E7%BE%8E%E5%A3%81%E7%BA%B8%EF%BC%88847%EF%BC%89/1%20%2816%29.jpg"
+              data-src="https://yangyang666.oss-cn-chengdu.aliyuncs.com/wordpress/%E4%BA%8C%E6%AC%A1%E5%85%83%E7%BB%9D%E7%BE%8E%E5%A3%81%E7%BA%B8%EF%BC%88847%EF%BC%89/0889d2b3a925681865243877e2077b18.jpg"
               data-sizes="auto"
               alt="恒源云"
               class="lazyload"
             />
           
         
-        <a href="https://louaq.com/post/article_2/"></a>
+        <a href="http://localhost:1313/post/article_2/"></a>
         <div class="article-nav-caption">前一篇</div>
         <h3 class="article-nav-title">
           
@@ -1196,7 +1457,7 @@ Neck部分通常会使用上采样和下采样操作，以调整特征图的尺�
             class="lazyload"
           />
         
-        <a href="https://louaq.com/post/visual-studio-code-and-latex/"></a>
+        <a href="http://localhost:1313/post/visual-studio-code-and-latex/"></a>
         <div class="article-nav-caption">后一篇</div>
         <h3 class="article-nav-title">
           
@@ -1227,224 +1488,9 @@ Neck部分通常会使用上采样和下采样操作，以调整特征图的尺�
 
 
 </section>
-          
-            <aside id="sidebar">
-  
-  
-  <div class="sidebar-wrapper wrap-sticky">
-    <div
-      class="sidebar-wrap"
-      data-aos="fade-up"
-    >
-      
-        <div class="sidebar-toc-sidebar">
-          <div class="sidebar-toc">
-  <h3 class="toc-title">文章目录</h3>
-  <div class="sidebar-toc-wrapper toc-div-class">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#一yolov8的简介">一、YOLOv8的简介</a></li>
-    <li><a href="#二yolov8相对于yolov5的核心改动">二、YOLOv8相对于Yolov5的核心改动</a></li>
-    <li><a href="#三yolov8的网络结构"><strong>三、YOLOv8的网络结构</strong></a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
-    <li><a href="#四环境搭建">四、环境搭建</a></li>
-    <li><a href="#五数据集获取">五、数据集获取</a></li>
-    <li><a href="#六模型获取">六、模型获取</a></li>
-    <li><a href="#七模型训练">七、模型训练</a>
-      <ul>
-        <li><a href="#71-训练的三种方式">7.1 训练的三种方式</a></li>
-      </ul>
-    </li>
-    <li><a href="#八模型验证测试">八、模型验证/测试 </a></li>
-    <li><a href="#九模型推理">九、模型推理</a></li>
-    <li><a href="#十模型输出">十、模型输出</a></li>
-  </ul>
-</nav>
-  </div>
-</div>
         </div>
-        <div class="sidebar-common-sidebar hidden">
-          
-<div class="sidebar-author">
-  <img
-    data-src="/avatar/b1.png"
-    data-sizes="auto"
-    alt="Louaq"
-    class="lazyload"
-  />
-  <div class="sidebar-author-name">Louaq</div>
-  <div class="sidebar-description">waiting...</div>
-</div>
-<div class="sidebar-state">
-  <div class="sidebar-state-article">
-    <div>文章</div>
-    
-    <div class="sidebar-state-number">8</div>
-  </div>
-  <div class="sidebar-state-category">
-    <div>分类</div>
-    <div class="sidebar-state-number">
-      2
-    </div>
-  </div>
-  <div class="sidebar-state-tag">
-    <div>标签</div>
-    <div class="sidebar-state-number">10</div>
-  </div>
-</div>
-<div class="sidebar-social">
-  
-    <div class="icon-bilibili sidebar-social-icon">
-      <a
-        href="https://space.bilibili.com/397523112"
-        itemprop="url"
-        target="_blank"
-        aria-label="bilibili"
-        rel="noopener external nofollow noreferrer"
-      ></a>
-    </div>
-  
-    <div class="icon-email sidebar-social-icon">
-      <a
-        href="mailto:beautbawj9@gmail.com"
-        itemprop="url"
-        target="_blank"
-        aria-label="email"
-        rel="noopener external nofollow noreferrer"
-      ></a>
-    </div>
-  
-    <div class="icon-github sidebar-social-icon">
-      <a
-        href="https://github.com/Louaq"
-        itemprop="url"
-        target="_blank"
-        aria-label="github"
-        rel="noopener external nofollow noreferrer"
-      ></a>
-    </div>
-  
-    <div class="icon-steam sidebar-social-icon">
-      <a
-        href="https://steamcommunity.com/profiles/76561198924508021/"
-        itemprop="url"
-        target="_blank"
-        aria-label="steam"
-        rel="noopener external nofollow noreferrer"
-      ></a>
-    </div>
-  
-    <div class="icon-weibo sidebar-social-icon">
-      <a
-        href="https://www.weibo.com/u/5769723850"
-        itemprop="url"
-        target="_blank"
-        aria-label="weibo"
-        rel="noopener external nofollow noreferrer"
-      ></a>
-    </div>
-  
-    <div class="icon-zhihu sidebar-social-icon">
-      <a
-        href="https://www.zhihu.com/people/an-ye-jing-ling-64-3"
-        itemprop="url"
-        target="_blank"
-        aria-label="zhihu"
-        rel="noopener external nofollow noreferrer"
-      ></a>
-    </div>
-  
-</div>
-<div class="sidebar-menu">
-  
-    <div class="sidebar-menu-link-wrap">
-      <a
-        class="sidebar-menu-link-dummy"
-        href="/"
-        aria-label="首页"
-      ></a>
-      <div class='sidebar-menu-icon icon rotate'>
         
-          
-            &#xe62b;
-          
         
-      </div>
-      <div class="sidebar-menu-link">首页</div>
-    </div>
-  
-    <div class="sidebar-menu-link-wrap">
-      <a
-        class="sidebar-menu-link-dummy"
-        href="/archives"
-        aria-label="归档"
-      ></a>
-      <div class='sidebar-menu-icon icon rotate'>
-        
-          
-            &#xe62b;
-          
-        
-      </div>
-      <div class="sidebar-menu-link">归档</div>
-    </div>
-  
-    <div class="sidebar-menu-link-wrap">
-      <a
-        class="sidebar-menu-link-dummy"
-        href="/about"
-        aria-label="关于"
-      ></a>
-      <div class='sidebar-menu-icon icon rotate'>
-        
-          
-            &#xe62b;
-          
-        
-      </div>
-      <div class="sidebar-menu-link">关于</div>
-    </div>
-  
-    <div class="sidebar-menu-link-wrap">
-      <a
-        class="sidebar-menu-link-dummy"
-        href="/friend"
-        aria-label="友链"
-      ></a>
-      <div class='sidebar-menu-icon icon rotate'>
-        
-          
-            &#xe62b;
-          
-        
-      </div>
-      <div class="sidebar-menu-link">友链</div>
-    </div>
-  
-</div>
-
-        </div>
-      
-
-      
-        <div class="sidebar-btn-wrapper" style="position:static">
-          <div class="sidebar-toc-btn current"></div>
-          <div class="sidebar-common-btn"></div>
-        </div>
-      
-    </div>
-  </div>
-
-  <div class="sidebar-widget">
-    
-  </div>
-</aside>
-
-          
-        </main>
         
 
 
@@ -1817,7 +1863,7 @@ Neck部分通常会使用上采样和下采样操作，以调整特征图的尺�
 
   
       
-      <script src="/js/main.js" integrity="" crossorigin="anonymous" ></script>
+      <script src="/js/main.js" ></script>
       
 
 
@@ -1830,7 +1876,7 @@ Neck部分通常会使用上采样和下采样操作，以调整特征图的尺�
 
   
       
-      <script src="/js/aos.js" integrity="" crossorigin="anonymous" ></script>
+      <script src="/js/aos.js" ></script>
       
 
   <script>
@@ -1858,7 +1904,7 @@ Neck部分通常会使用上采样和下采样操作，以调整特征图的尺�
 
   
       
-      <script src="/js/pjax_main.js" integrity="" crossorigin="anonymous" data-pjax></script>
+      <script src="/js/pjax_main.js" data-pjax></script>
       
 
 
@@ -1925,7 +1971,7 @@ Neck部分通常会使用上采样和下采样操作，以调整特征图的尺�
 
   
       
-      <script src="/js/algolia_search.js" integrity="" crossorigin="anonymous" ></script>
+      <script src="/js/algolia_search.js" ></script>
       
 
 
@@ -1990,6 +2036,21 @@ Neck部分通常会使用上采样和下采样操作，以调整特征图的尺�
 <div id="lazy-script">
   <div>
     
+      
+      
+        
+      
+      <script data-pjax>
+        window.REIMU_POST = {
+          author: "Louaq",
+          title: "YOLOv8的训练自己的数据集",
+          url: "http:\/\/localhost:1313\/post\/article_1\/",
+          description: " 一、YOLOv8的简介 YOLO（You Only Look Once）系列算法因其高效、准确等特点而备受瞩目。由2023年Ultralytics公司发布了YOLO的最新版本YOLOv8是结合前几代YOLO的基础上的一个融合改进版。\n本文YOLOv8网络结构\/环境搭建\/数据集获取\/训练\/推理\/验证\/导出\/部署，从网络结构的讲解从模型的网络结构讲解到模型的部署都有详细介绍，同时在本专栏中还包括YOLOv8模型系列的改进包括个人提出的创新点，传统卷积、注意力机制、损失函数的修改教程，能够帮助你的论文获得创新点。\n二、YOLOv8相对于Yolov5的核心改动 从YOLOv8的网络结构可以看出,其延 …",
+          cover: "http:\/\/localhost:1313\/images\/banner.jpg",
+        };
+      </script>
+    
+    
     
       
 
@@ -1999,7 +2060,7 @@ Neck部分通常会使用上采样和下采样操作，以调整特征图的尺�
 
   
       
-      <script src="/js/insert_highlight.js" integrity="" crossorigin="anonymous" data-pjax></script>
+      <script src="/js/insert_highlight.js" data-pjax></script>
       
 
       
@@ -2089,6 +2150,44 @@ Neck部分通常会使用上采样和下采样操作，以调整特征图的尺�
 
 
 
+      
+        
+
+  
+  
+  
+  
+  
+  
+  <script
+    src="https://npm.webcache.cn/qrcode@1.4.4/build/qrcode.min.js"
+    defer
+    
+    data-pjax
+    
+    integrity="sha384-0RsG1yo/crf/1Qc14sho26SXXOTngNCjgJw7fuvXBt9W/OChF/Ijx&#43;aUuBDqQwEk" crossorigin="anonymous"
+  ></script>
+
+
+        
+
+  
+  
+  
+  
+  
+  
+  <script
+    src="https://npm.webcache.cn/html-to-image@1.11.11/dist/html-to-image.js"
+    defer
+    
+    data-pjax
+    
+    integrity="sha384-UbfRVKN3/elS1r7JcK2FhmPP&#43;KlJ4CvYwbyYD7tH&#43;uTkbT9bNJr9eJeQ0FoFbAgz" crossorigin="anonymous"
+  ></script>
+
+
+      
     
     
   </div>
