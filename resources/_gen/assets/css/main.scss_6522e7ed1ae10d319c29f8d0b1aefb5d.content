@@ -2072,6 +2072,13 @@ a, .main-nav-icon, .popup-btn-close {
   margin-inline-start: 0;
   margin-inline-end: 0;
   transition: 0.3s;
+  interpolate-size: allow-keywords;
+}
+
+.article-entry div.highlight.code-closed pre {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
 }
 
 .article-entry div.highlight:hover {
@@ -2114,6 +2121,7 @@ a, .main-nav-icon, .popup-btn-close {
 .article-entry div.highlight tr td:first-of-type {
   width: 30px;
   padding-right: 10px;
+  vertical-align: top;
 }
 
 .article-entry div.highlight tr td:first-of-type pre code {
@@ -2200,10 +2208,6 @@ a, .main-nav-icon, .popup-btn-close {
 .code-closed .code-expand {
   transform: rotate(-180deg) !important;
   transition: 0.3s;
-}
-
-.code-closed pre {
-  display: none;
 }
 
 .chroma .s,
@@ -2723,6 +2727,7 @@ a, .main-nav-icon, .popup-btn-close {
   justify-content: center;
   align-items: center;
   transition: 0.3s;
+  interpolate-size: allow-keywords;
 }
 
 .sidebar-wrap .hidden {
@@ -2899,12 +2904,14 @@ a, .main-nav-icon, .popup-btn-close {
 }
 
 .sidebar-menu-link-wrap {
-  margin: 8px 50px;
   display: flex;
   position: relative;
   justify-content: center;
   border: 10px var(--color-red-3-shadow) double;
   transition: border 0.5s;
+  width: 70%;
+  max-width: 200px;
+  margin: 8px auto;
 }
 
 .sidebar-menu-link-wrap:hover {
@@ -3001,7 +3008,7 @@ a, .main-nav-icon, .popup-btn-close {
 
 .sidebar-toc-wrapper {
   color: var(--color-link);
-  max-height: calc(100vh - 120px);
+  max-height: calc(100vh - 150px);
   overflow: auto;
 }
 
@@ -3136,8 +3143,14 @@ a, .main-nav-icon, .popup-btn-close {
   display: flex;
   flex-direction: column;
   width: 100%;
-  justify-content: center;
   align-items: center;
+  overflow-y: auto;
+  max-height: calc(100vh - 120px);
+}
+
+.sidebar-common-sidebar::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
 }
 
 .sidebar-toc-sidebar {
