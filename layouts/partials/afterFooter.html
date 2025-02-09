@@ -71,37 +71,34 @@
     function loadScripts(scripts, index) {
       if (index < scripts.length) {
         const script = scripts[index];
-        const src = script.getAttribute("src");
+        const src = script.getAttribute('src');
 
         const loadScript = (scriptContent) => {
-          const scriptElement = document.createElement('script');
-          if (script.type) {
-            scriptElement.type = script.type;
-          }
-          scriptElement.text = scriptContent;
-          document.head.appendChild(scriptElement);
-          loadScripts(scripts, index + 1);
+          return new Promise((resolve, reject) => {
+            const scriptElement = document.createElement('script');
+            if (script.type) {
+              scriptElement.type = script.type;
+            }
+            if (script.src) {
+              scriptElement.src = script.src;
+              scriptElement.onload = resolve;
+              scriptElement.onerror = reject;
+            }
+            if (scriptContent) {
+              scriptElement.text = scriptContent;
+            }
+            document.head.appendChild(scriptElement);
+            if (!script.src) {
+              resolve();
+            }
+          })
         }
-
-        if (src) {
-          fetch(src)
-            .then((response) => {
-              if (!response.ok) {
-                throw new Error(
-                  "Network response was not ok " + response.statusText,
-                );
-              }
-              return response.text();
-            })
-            .then((scriptContent) => {
-              loadScript(scriptContent);
-            })
-            .catch((error) => {
-              console.error("Failed to load script:", src, error);
-            });
-        } else {
-          loadScript(script.text);
-        }
+        ;(src ? loadScript() : loadScript(script.text))
+          .then(() => loadScripts(scripts, index + 1))
+          .catch(error => {
+            console.error(`Failed to load script: ${src || 'inline script'}`, error);
+            loadScripts(scripts, index + 1);
+          });
       }
     }
     window.Pjax &&
@@ -154,7 +151,7 @@
   }
 </script> {{ partial "helpers/js.html" (dict "src" (index (partial "helpers/vendorCdn.html" (dict "item" $js.live2d.js "ctx" $site)) 0) "async" true "onload" "initLive2d()") }}
 {{ else if $params.live2d_widgets.enable }}
-  {{ partial "helpers/js.html" (dict "src" (index (partial "helpers/vendorCdn.html" (dict "item" $js.live2d_widgets "ctx" $site)) 0) "integrity" (index (partial "helpers/vendorCdnIntegrity.html" (dict "item" $js.live2d_widgets)) 0)) }}
+{{ partial "helpers/js.html" (dict "src" (index (partial "helpers/vendorCdn.html" (dict "item" $js.live2d_widgets "ctx" $site)) 0) "defer" true "integrity" (index (partial "helpers/vendorCdnIntegrity.html" (dict "item" $js.live2d_widgets)) 0)) }}
 {{ end }}
 
 {{ if $params.quicklink.enable }}
@@ -314,7 +311,7 @@
         <script data-pjax>
           var renderMath = () => {
             if (!window.renderMathInElement) return;
-            window.renderMathInElement(document.body, {
+            window.renderMathInElement(_$("article"), {
               delimiters: [
                 { left: "$$", right: "$$", display: true },
                 { left: "\\[", right: "\\]", display: true },
