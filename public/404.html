@@ -218,7 +218,7 @@
             
           
         </div>
-        <a class="main-nav-link" href="/"></a>
+        <a class="main-nav-link" href="/">首页</a>
       </span>
     
       <span class="main-nav-link-wrap">
@@ -229,7 +229,7 @@
             
           
         </div>
-        <a class="main-nav-link" href="/archives"></a>
+        <a class="main-nav-link" href="/archives">归档</a>
       </span>
     
       <span class="main-nav-link-wrap">
@@ -240,7 +240,7 @@
             
           
         </div>
-        <a class="main-nav-link" href="/about"></a>
+        <a class="main-nav-link" href="/about">关于</a>
       </span>
     
       <span class="main-nav-link-wrap">
@@ -251,7 +251,7 @@
             
           
         </div>
-        <a class="main-nav-link" href="/friend"></a>
+        <a class="main-nav-link" href="/friend">友链</a>
       </span>
     
     <a id="main-nav-toggle" class="nav-icon"></a>
@@ -259,7 +259,7 @@
   <nav id="sub-nav">
     
     
-      <a id="nav-search-btn" class="nav-icon popup-trigger" title=""></a>
+      <a id="nav-search-btn" class="nav-icon popup-trigger" title="搜索"></a>
     
   </nav>
 </div>
@@ -277,13 +277,13 @@
     <div id="header-title">
       
         <a href="/" id="logo">
-          <h1 data-aos="slide-up"></h1>
+          <h1 data-aos="slide-up">4 0 4 (ﾟ⊿ﾟ)ﾂ</h1>
         </a>
       
   
       
         <h2 id="subtitle-wrap" data-aos="slide-down">
-          <a href="/" id="subtitle"></a>
+          <a href="/" id="subtitle">満 身 創 痍</a>
         </h2>
       
     </div>
@@ -622,20 +622,22 @@
     var highlight = JSON.parse('true');
     var visitor = JSON.parse('true');
 
-    new Valine({
-      el: '.vcomment',
-      appId: "0Mjc3mdBrN8OYovk9yaFnaWO-gzGzoHsz",
-      appKey: "VNEmZEAvagCiszqPZ3JFfVI4",
-      placeholder: "Just go go",
-      pageSize: '10',
-      avatar: 'mp',
-      lang: 'zh-cn',
-      recordIP: recordIP,
-      highlight: highlight,
-      visitor: visitor,
-      requiredFields: guest_info,
-      path: window.location.pathname
-    });
+    if (window.Valine) {
+      new Valine({
+        el: '.vcomment',
+        appId: "0Mjc3mdBrN8OYovk9yaFnaWO-gzGzoHsz",
+        appKey: "VNEmZEAvagCiszqPZ3JFfVI4",
+        placeholder: "Just go go",
+        pageSize: '10',
+        avatar: 'mp',
+        lang: 'zh-cn',
+        recordIP: recordIP,
+        highlight: highlight,
+        visitor: visitor,
+        requiredFields: guest_info,
+        path: window.location.pathname
+      });
+    }
   </script>
 
 
