@@ -2,6 +2,7 @@
 title: YOLOv8的训练自己的数据集
 date: 2024-11-25 12:00:00
 expires: 2024-12-30 23:59:59
+cover: https://vip.123pan.cn/1816472581/yk6baz03t0m000d6xujocxe9zhglhvdaDIYPAqF0DqJ1DGxwDIiw.png
 tags: 
     - "python"
     - "Deep Learning"
