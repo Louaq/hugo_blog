@@ -14,7 +14,7 @@
   opacity: 0;
   transform: scale(0.5);
   transition: 0.3s;
-  box-shadow: 0 0 15px var(--color-meta-shadow);
+  box-shadow: 0 0 10px var(--color-meta-shadow);
 
   &.show {
     visibility: visible;

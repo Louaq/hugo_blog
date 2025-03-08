@@ -61,6 +61,27 @@ open_graph:
 # Content
 excerpt_link: Read More
 
+# Inject code snippet
+# Make sure your code snippet is safeHTML
+injector:
+  head_begin: # Inject code snippet right after <head>
+  head_end: # Inject code snippet right before </head>
+  body_begin: # Inject code snippet right after <body>
+  body_end: # Inject code snippet right before </body>
+  sidebar_begin: # Inject code snippet right after <aside>
+  sidebar_end: # Inject code snippet right before </aside>
+
+# Footer copyright
+# Inject code snippet right in the footer copyright
+# Make sure your code snippet is safeHTML
+copyright:
+# Need help choosing? Please see...
+# https://creativecommons.org/choose/
+# https://choosealicense.com/
+# copyright: |-
+#   <div style="flex-direction:column;align-items: center;"><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+#   All website licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></div>
+
 footer:
   since: 2024 # 2020-current year
   powered: true
@@ -123,7 +144,7 @@ reimu_cursor:
     pointer: ../images/cursor/reimu-cursor-pointer.png
     text: ../images/cursor/reimu-cursor-text.png
 
-icon_font: 4552607_bq08450reo
+icon_font: 4552607_0khxww3tj3q9
 
 # https://fonts.google.com/
 # Google Fonts, higher priority than local_font
@@ -150,7 +171,10 @@ local_font:
     - monospace
 
 dark_mode:
-  enable: false # set to true to make your website default to dark mode
+  # true means that the dark mode is enabled by default
+  # false means that the dark mode is disabled by default
+  # auto means that the dark mode is automatically switched according to the system settings
+  enable: auto # true | false | auto
 
 ########################################
 # Analytics
@@ -492,6 +516,7 @@ player:
       volume:
       mutex:
       listFolded:
+      lrcType:
   meting:
     # https://github.com/metowolf/MetingJS
     # if you want to use meting, please enable aplayer first
