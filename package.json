@@ -1,5 +1,5 @@
 {
-  "version": "0.6.3",
+  "version": "0.6.4",
   "dependencies": {
     "atomic-algolia": "^0.3.19",
     "prettier": "^3.4.2",

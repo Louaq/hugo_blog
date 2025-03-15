@@ -3524,6 +3524,13 @@ body ::selection {
   padding: 20px 20px 10px;
 }
 
+.widget-link {
+  text-decoration: none;
+  color: var(--grey-9);
+  font-size: 14px;
+  padding: 20px 20px 10px;
+}
+
 .widget {
   color: var(--grey-7);
   padding: 10px 20px;
@@ -3568,7 +3575,8 @@ body ::selection {
 }
 
 .widget li {
-  margin: 10px 0;
+  margin: 5px 0;
+  line-height: normal;
 }
 
 .widget li:before {

@@ -1,6 +1,6 @@
 <aside id="sidebar">
   {{ if .Site.Params.injector.sidebar_begin }}
-  {{ .Site.Params.injector.sidebar_begin | safeHTML }}
+    {{ .Site.Params.injector.sidebar_begin | safeHTML }}
   {{ end }}
   {{ if and .Site.Params.player.aplayer.enable (not .Site.Params.player.meting.enable) (not .Site.Params.player.aplayer.options.fixed)  }}
     <div id="aplayer" theme="var(--color-link)" data-aos="{{ .Site.Params.animation.options.home.sidebar }}"></div>
@@ -34,10 +34,10 @@
           {{ partial "sidebar/tocBar.html" . }}
         </div>
         <div class="sidebar-common-sidebar hidden">
-          {{ partial "sidebar/commonBar.html" . }}
+          {{ partialCached "sidebar/commonBar.html" . }}
         </div>
       {{ else }}
-        {{ partial "sidebar/commonBar.html" . }}
+        {{ partialCached "sidebar/commonBar.html" . }}
       {{ end }}
 
       {{ if in .Site.Params.mainSections .Type }}
@@ -52,11 +52,11 @@
   <div class="sidebar-widget">
     {{ if and (not (in .Site.Params.mainSections .Type)) .Site.Params.widgets }}
       {{ range .Site.Params.widgets }}
-        {{ partial (printf "widget/%s.html" .) $ }}
+        {{ partialCached (printf "widget/%s.html" .) $ }}
       {{ end }}
     {{ end }}
   </div>
   {{ if .Site.Params.injector.sidebar_end }}
-  {{ .Site.Params.injector.sidebar_end | safeHTML }}
+    {{ .Site.Params.injector.sidebar_end | safeHTML }}
   {{ end }}
 </aside>
