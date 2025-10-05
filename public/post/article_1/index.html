@@ -16,6 +16,9 @@
 
 
 
+    
+  
+
 
 
 
@@ -635,7 +638,8 @@
 <li>
 <p>样本匹配方式的改进：采用了Task-Aligned Assigner匹配方式。</p>
 </li>
-</ol></blockquote>
+</ol>
+</blockquote>
 <p>这些改进使得YOLOv8在目标检测方面具有更高的精度和更快的速度，同时保持了轻量化的特点。</p>
 <p><strong>具体来说</strong>，YOLOv8的Backbone部分使用了C2f模块来替代了YOLOv5中的C3模块，实现了进一步的轻量化。同时，它也保留了YOLOv5等架构中使用的SPPF（空间金字塔池化）模块。</p>
 <p>在PAN-FPN（路径聚合网络-特征金字塔网络）部分，虽然YOLOv8依旧采用了PAN的思想，但是在结构上，它删除了YOLOv5中PAN-FPN上采样阶段中的卷积结构，并将C3模块替换为了C2f模块。</p>
@@ -655,7 +659,8 @@
 <li>
 <p>Head：它负责最终的目标检测和分类任务，包括一个检测头和一个分类头。检测头包含一系列卷积层和反卷积层，用于生成检测结果；分类头则采用全局平均池化来对每个特征图进行分类。</p>
 </li>
-</ol></blockquote>
+</ol>
+</blockquote>
 <p>下面我们来针对于YOLOv8的三个组成部分进行详细讲解。</p>
 <h4 id="31-backbone">
 <a class="header-anchor" href="#31-backbone"></a>
@@ -688,7 +693,8 @@
 <li><strong>非线性表示：每个卷积层之后都添加了Batch Normalization（批标准化）层和ReLU激活函数，以增强模型的非线性表示能力。</strong></li>
 </ol>
 <blockquote>
-<p>在其中Batch Normalization（批标准化）是深度学习中常用的一种技术，用于加速神经网络的训练。Batch Normalization通过对每个小批量数据进行标准化，使得神经网络在训练过程中更加稳定，可以使用更高的学习率，并且减少了对初始化权重的依赖。Batch Normalization的基本思想是：对每个小批量数据进行标准化，使得每个特征的均值为0，方差为1，然后再通过一个可学习的缩放因子和平移因子来调整数据的分布，从而使得神经网络更容易训练。</p></blockquote>
+<p>在其中Batch Normalization（批标准化）是深度学习中常用的一种技术，用于加速神经网络的训练。Batch Normalization通过对每个小批量数据进行标准化，使得神经网络在训练过程中更加稳定，可以使用更高的学习率，并且减少了对初始化权重的依赖。Batch Normalization的基本思想是：对每个小批量数据进行标准化，使得每个特征的均值为0，方差为1，然后再通过一个可学习的缩放因子和平移因子来调整数据的分布，从而使得神经网络更容易训练。</p>
+</blockquote>
 <h5 id="312-c2f模块">
 <a class="header-anchor" href="#312-c2f%e6%a8%a1%e5%9d%97"></a>
 <strong>3.1.2 C2f模块</strong>
@@ -702,9 +708,11 @@
 <p>数学上，假设我们有一个输入x，通过多个网络层进行处理后得到预测值H(x)。那么残差连接的表达式为：</p>
 <p>F(x) = H(x) + x</p>
 <p>其中，F(x)为残差块的输出，H(x)为经过一系列网络层处理后得到的特征表示，x为输入直接连接到残差块中的跳跃连接。</p>
-<p>通过残差连接，网络可以更容易地学习残差或误差，从而使网络更深层次的特征表达更准确。这对于训练深层神经网络非常有用，可以提高网络的性能和收敛速度。</p></blockquote>
+<p>通过残差连接，网络可以更容易地学习残差或误差，从而使网络更深层次的特征表达更准确。这对于训练深层神经网络非常有用，可以提高网络的性能和收敛速度。</p>
+</blockquote>
 <blockquote>
-<p> 在C2f模块中用到的DarknetBottleneck模块其中使用多个3x3卷积核进行卷积操作，提取特征信息。同时其具有add是否进行残差链接的选项。</p></blockquote>
+<p> 在C2f模块中用到的DarknetBottleneck模块其中使用多个3x3卷积核进行卷积操作，提取特征信息。同时其具有add是否进行残差链接的选项。</p>
+</blockquote>
 <p> <strong>其实整个C2f模块就是一个改良版本的Darknet</strong></p>
 <ol>
 <li>
@@ -729,7 +737,8 @@
 <p>Neck部分主要起到一个特征融合的操作, YOLOv8的Neck部分依然采用PAN-FPN的思想，下图的a，b，c为一个Neck部分的流程示意图。</p>
 <p><img src="https://yangyang666.oss-cn-chengdu.aliyuncs.com/typoraImages/a3aeff6d8f0542a79efbd5e95c0b10b9.png" alt="a3aeff6d8f0542a79efbd5e95c0b10b9.png"></p>
 <blockquote>
-<p>整个Neck部分的步骤如下：：将特征提取网络(Backbone)的输出P3，P4，P5输入进PAN-FPN网络结构，使得多个尺度的特征图进行融合；将P5经过上采样与P4进行融合得到F1，将F1经过C2f层和一次上采样与P3进行融合得到T1，将T1经过一次卷积层与F1经过融合得到F2，将F2经过一次C2f层得到T2，将T2经过一次卷积层与P5融合得到F3，将F3经过一次C2f层得到T3，最终得到T1、T2、T3就是整个Neck的产物； </p></blockquote>
+<p>整个Neck部分的步骤如下：：将特征提取网络(Backbone)的输出P3，P4，P5输入进PAN-FPN网络结构，使得多个尺度的特征图进行融合；将P5经过上采样与P4进行融合得到F1，将F1经过C2f层和一次上采样与P3进行融合得到T1，将T1经过一次卷积层与F1经过融合得到F2，将F2经过一次C2f层得到T2，将T2经过一次卷积层与P5融合得到F3，将F3经过一次C2f层得到T3，最终得到T1、T2、T3就是整个Neck的产物； </p>
+</blockquote>
 <p>上述过程可以描述为下图，我在图片上做了一些标准方便理解。</p>
 <p><img src="https://yangyang666.oss-cn-chengdu.aliyuncs.com/typoraImages/4b480765acd947879588f6d132704eb8.jpeg" alt="4b480765acd947879588f6d132704eb8.jpeg"></p>
 <p>上述的过程可以在代码部分看到,我们同样看YOLOv8的yaml文件，能够更直观的看到这个步骤,大家可以看代码同时对应图片来进行分析:</p>
@@ -761,7 +770,8 @@ Neck部分通常会使用上采样和下采样操作，以调整特征图的尺�
 <p>YOLOv8的Neck部分通过特征金字塔网络和特征融合等操作，<strong>有效地提取和融合多尺度的特征</strong>，从而提高了目标检测的性能和鲁棒性。这使得模型能够更好地适应不同尺度和大小的目标，并在复杂场景下取得更准确的检测结果。</p>
 <blockquote>
 <p>PAN-FPN（具有特征金字塔网络的路径聚合网络）是一种用于计算机视觉中对象检测的神经网络架构。它将特征金字塔网络（FPN）与路径聚合网络（PAN）相结合，以提高目标检测的准确性和效率。</p>
-<p>FPN 用于从不同比例的图像中提取特征，而 PAN 用于跨网络的不同层聚合这些特征。这允许网络检测不同大小和分辨率的对象，并处理具有多个对象的复杂场景。</p></blockquote>
+<p>FPN 用于从不同比例的图像中提取特征，而 PAN 用于跨网络的不同层聚合这些特征。这允许网络检测不同大小和分辨率的对象，并处理具有多个对象的复杂场景。</p>
+</blockquote>
 <h4 id="33-head">
 <a class="header-anchor" href="#33-head"></a>
 3.3 Head
@@ -772,7 +782,8 @@ Neck部分通常会使用上采样和下采样操作，以调整特征图的尺�
 <p>在Head部分的三个解耦头分别对应着Neck部分的特征图输出T1、T2、T3。、</p>
 <p><strong>解耦头的工作流程是：</strong></p>
 <blockquote>
-<p>将网络得到的特征图T1，T2，T3分别输入解耦头头进行预测，检测头的结构如下图所示其中包含4个3×3卷积与2个1×1卷积，同时在检测头的回归分支中添加WIOU损失函数如图4所示，回归头部需要计算预测框与真实框之间的位置偏移量，然后将偏移量送入回归头部进行损失计算，然后输出一个四维向量，分别表示目标框的左上角坐标x、y和右下角坐标x、y。分类头部针对于每个Anchor Free提取的候选框对其进行RoI Pooling和卷积操作得到一个分类器输出张量每个位置上的值表示该候选框属于每个类别的概率，在最后通过极大值抑制方式筛选出最终的检测结果 </p></blockquote>
+<p>将网络得到的特征图T1，T2，T3分别输入解耦头头进行预测，检测头的结构如下图所示其中包含4个3×3卷积与2个1×1卷积，同时在检测头的回归分支中添加WIOU损失函数如图4所示，回归头部需要计算预测框与真实框之间的位置偏移量，然后将偏移量送入回归头部进行损失计算，然后输出一个四维向量，分别表示目标框的左上角坐标x、y和右下角坐标x、y。分类头部针对于每个Anchor Free提取的候选框对其进行RoI Pooling和卷积操作得到一个分类器输出张量每个位置上的值表示该候选框属于每个类别的概率，在最后通过极大值抑制方式筛选出最终的检测结果 </p>
+</blockquote>
 <p><img src="https://yangyang666.oss-cn-chengdu.aliyuncs.com/typoraImages/ddf8b2f464a348868513ba3488ece02b.png" alt="ddf8b2f464a348868513ba3488ece02b.png"></p>
 <p>我们再从YOLOv8的yaml文件来看Head部分的作用</p>
 <p><img src="https://yangyang666.oss-cn-chengdu.aliyuncs.com/typoraImages/16099ed50b934e5ba7100ab8a381c1cd.png" alt="16099ed50b934e5ba7100ab8a381c1cd.png"></p>
@@ -1155,7 +1166,8 @@ Neck部分通常会使用上采样和下采样操作，以调整特征图的尺�
 <li>
 <p>FLV（.flv）：这是一种用于在线视频传输的流式视频文件格式</p>
 </li>
-</ul></blockquote>
+</ul>
+</blockquote>
 <hr>
 <h2 id="十模型输出">
 <a class="header-anchor" href="#%e5%8d%81%e6%a8%a1%e5%9e%8b%e8%be%93%e5%87%ba"></a>
@@ -1169,7 +1181,8 @@ Neck部分通常会使用上采样和下采样操作，以调整特征图的尺�
 <p>4. Caffe Model：Caffe 是一个流行的深度学习框架，它使用自己的模型表示格式。导出为 Caffe 模型的文件可以在 Caffe 框架中进行部署和推理。</p>
 <p>5. TFLite（TensorFlow Lite）：TFLite 是 TensorFlow 的移动和嵌入式设备推理框架，支持在资源受限的设备上进行高效推理。模型可以导出为 TFLite 格式，以便在移动设备或嵌入式系统中进行部署。</p>
 <p>6. Core ML（Core Machine Learning）：Core ML 是苹果的机器学习框架，用于在 iOS 和 macOS 上进行推理。模型可以导出为 Core ML 格式，以便在苹果设备上进行部署。</p>
-<p>这些格式都提供了不同的优势和适用场景。选择合适的导出格式应该考虑到目标平台和部署环境的要求，以及所使用的深度学习框架的支持情况。</p></blockquote>
+<p>这些格式都提供了不同的优势和适用场景。选择合适的导出格式应该考虑到目标平台和部署环境的要求，以及所使用的深度学习框架的支持情况。</p>
+</blockquote>
 <p>模型输出的参数有如下</p>
 <table>
   <thead>
