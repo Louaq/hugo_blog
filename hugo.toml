@@ -21,6 +21,7 @@ isPlainText = true
 mediaType = "application/json"
 notAlternative = true
 
+
 [markup.goldmark.extensions.passthrough]
 enable = true
 delimiters.block = [["\\[", "\\]"], ["$$", "$$"]]
